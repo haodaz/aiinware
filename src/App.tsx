@@ -354,8 +354,8 @@ const App: React.FC = () => {
                 {/* Brain Module 2: 可信任大脑 */}
                 <div style={{ marginTop: '100px', borderTop: '1px solid #e8e8e8', paddingTop: '80px' }}>
                   <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                    <Title level={2} style={{ color: '#333', fontSize: '2rem' }}>模块 2：给硬件一个“可信任”的大脑</Title>
-                    <Paragraph style={{ color: '#666', fontSize: '1.2rem', marginTop: 10 }}>在高容错、高责任的教育科技人才领域，判断AI是否可用的唯一标准是“可信任”</Paragraph>
+                    <Title level={2} style={{ color: '#333', fontSize: '2rem' }}>给硬件一个“可信任”的大脑</Title>
+                    <Paragraph style={{ color: '#666', fontSize: '1.2rem', marginTop: 10 }}>在高容错、高责任的领域，我们需要“可信任”的智慧大脑。</Paragraph>
                   </div>
                   
                   <Row gutter={[32, 32]} align="stretch">
@@ -407,12 +407,11 @@ const App: React.FC = () => {
               <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
                 <div style={{ textAlign: 'center', marginBottom: '80px' }}>
                   <Title level={4} style={{ color: '#d4af37', fontWeight: 'bold' }}>具心算力</Title>
-                  <Title level={2} style={{ color: '#333', fontSize: '2.5rem', marginTop: 10 }}>体系化论述</Title>
                 </div>
 
                 {/* Heart Module 1: 消耗品 vs 资产投资 */}
                 <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                  <Title level={2} style={{ color: '#333', fontSize: '2rem' }}>模块 1：算力是“消耗品” vs 算力是“资产投资”</Title>
+                  <Title level={2} style={{ color: '#333', fontSize: '2rem' }}>实现算力的资产化飞轮：从“一次性消耗”到“数字资产沉淀”</Title>
                   <Paragraph style={{ color: '#666', fontSize: '1.2rem', marginTop: 10 }}>每一次算力调用，都在为知识库持续“加厚”，让系统越用越聪明</Paragraph>
                 </div>
 
@@ -449,8 +448,8 @@ const App: React.FC = () => {
                 {/* Heart Module 2: 算力循环机制 */}
                 <div style={{ marginTop: '100px', borderTop: '1px solid #e8e8e8', paddingTop: '80px' }}>
                   <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                    <Title level={2} style={{ color: '#333', fontSize: '2rem' }}>模块 2：绝妙的算力循环机制</Title>
-                    <Paragraph style={{ color: '#666', fontSize: '1.2rem', marginTop: 10 }}>平方深谙如何做好算力的循环，让被循环的数据产生复利价值</Paragraph>
+                    <Title level={2} style={{ color: '#333', fontSize: '2rem' }}>打破单向消耗，形成以心为枢纽的算力循环</Title>
+                    <Paragraph style={{ color: '#666', fontSize: '1.2rem', marginTop: 10 }}>基于应用与硬件支持各系统，具心算力如何产生复利价值</Paragraph>
                   </div>
                   
                   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} style={{ maxWidth: '800px', margin: '0 auto' }}>
