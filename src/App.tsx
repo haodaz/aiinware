@@ -3,7 +3,6 @@ import { Layout, Typography, Card, Row, Col, Tag, Space, Timeline, ConfigProvide
 import { 
   SafetyOutlined, 
   ClusterOutlined, 
-  HeartOutlined, 
   CloudServerOutlined,
   AppstoreOutlined,
   BankOutlined,
@@ -194,26 +193,25 @@ const App: React.FC = () => {
           {/* Philosophy Section */}
           <section style={{ 
             minHeight: '100vh', 
-            backgroundImage: "url('./human_centric.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundAttachment: 'fixed',
+            background: 'linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)',
             display: 'flex', 
             alignItems: 'center', 
             padding: '80px 24px',
             position: 'relative'
           }}>
-            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(5, 11, 20, 0.85)' }} />
             <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 24px', textAlign: 'center', position: 'relative', zIndex: 1 }}>
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                <HeartOutlined style={{ fontSize: '64px', color: '#ff4d4f', marginBottom: '32px' }} />
-                <Title style={{ color: '#fff', fontSize: '4rem', margin: 0, fontWeight: 800 }}>具脑 + 具心 = 真正的以人为本</Title>
-                <Paragraph style={{ color: '#e0e0e0', fontSize: '1.5rem', lineHeight: 1.8, marginTop: '40px', textAlign: 'justify', textIndent: '2em' }}>
-                  在追逐冰冷算力和机械躯体的时代，我们坚信：<Text strong style={{ color: '#ff4d4f', fontSize: '1.5rem' }}>关注“人”、服务“人”、打动“人”</Text>，才是科技硬件的终极归宿。
-                </Paragraph>
-                <Paragraph style={{ color: '#e0e0e0', fontSize: '1.5rem', lineHeight: 1.8, textAlign: 'justify', textIndent: '2em' }}>
-                  只有当硬件具备了垂直深度的专业“大脑”（精准诊断、智慧决策），同时又拥有了能够长期记忆、持续共情的“心脏”（伴随成长、懂你所需），那些堆砌在机房里的算力与数据，才能真正转化为改变千行百业、温润千家万户的数字生命力。这不仅是硬件形态的升级，更是重塑硬件与人互动关系的哲学跨越。
-                </Paragraph>
+                <Title style={{ color: '#0b1a30', fontSize: '4rem', margin: 0, fontWeight: 800 }}>具脑 + 具心 = 真正的以人为本</Title>
+                
+                <div style={{ marginTop: '60px', textAlign: 'left', background: 'rgba(255,255,255,0.6)', padding: '40px', borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.03)', border: '1px solid rgba(255,255,255,0.8)' }}>
+                  <Paragraph style={{ color: '#444', fontSize: '1.4rem', lineHeight: 2, marginBottom: '40px', textIndent: '2em' }}>
+                    当硬件具备了垂直深度的专业“大脑”（精准诊断、智慧决策），并拥有了能够长期记忆、持续共情的特质，它便建立了与人之间更深刻的链接。人与硬件的交集，不再局限于冰冷的物理空间，而是延伸至心智的认可、情感的伴随与愿景的协作。
+                  </Paragraph>
+                  
+                  <Paragraph style={{ color: '#444', fontSize: '1.4rem', lineHeight: 2, margin: 0, textIndent: '2em' }}>
+                    当算力拥有了“心脏”，它将不再是无差别消耗的资源，而是被智能精准调度的源泉。通过软件与平台的管线，算力紧密围绕人的核心需求，源源不断地转化为有价值的数据、知识与智能应用。它被那些与人最贴近的真实场景需求所驱动，而在平方创想数字基础设施的加持下，这种需求反馈更促成了算力价值的生生不息与闭环流转。
+                  </Paragraph>
+                </div>
               </motion.div>
             </div>
           </section>
