@@ -458,46 +458,113 @@ const App: React.FC = () => {
                       算力<Text strong style={{ color: '#52c41a' }}>“回来”</Text>时，能够用好带回来的东西，所采集的高价值数据将被捕获与沉淀，持续赋能下一轮计算。
                     </Paragraph>
 
-                    {/* Animated Circulation Chart */}
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '30px 40px', background: 'rgba(255,255,255,0.7)', borderRadius: '16px', border: '1px solid rgba(24, 144, 255, 0.2)', boxShadow: '0 20px 40px rgba(24, 144, 255, 0.05)' }}>
-                      <div style={{ textAlign: 'center', padding: '20px 15px', background: '#fff', borderRadius: '12px', boxShadow: '0 8px 24px rgba(0,0,0,0.06)', width: '150px', zIndex: 2, border: '1px solid #e8e8e8' }}>
-                        <DatabaseOutlined style={{ fontSize: '36px', color: '#1890ff', marginBottom: '12px' }} />
-                        <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#0b1a30' }}>平方数据中枢</div>
+                    {/* Fancy Animated Circulation Chart */}
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '50px 40px', background: 'linear-gradient(135deg, #f0f7ff 0%, #ffffff 50%, #f6ffed 100%)', borderRadius: '24px', border: '1px solid rgba(255, 255, 255, 0.8)', boxShadow: '0 20px 60px rgba(0, 0, 0, 0.05), inset 0 0 40px rgba(255,255,255,0.5)', position: 'relative', overflow: 'hidden' }}>
+                      {/* Decorative background glows */}
+                      <div style={{ position: 'absolute', top: '-50px', left: '-50px', width: '200px', height: '200px', background: 'radial-gradient(circle, rgba(24,144,255,0.15) 0%, transparent 70%)', borderRadius: '50%' }} />
+                      <div style={{ position: 'absolute', bottom: '-50px', right: '-50px', width: '250px', height: '250px', background: 'radial-gradient(circle, rgba(82,196,26,0.15) 0%, transparent 70%)', borderRadius: '50%' }} />
+                      
+                      {/* Left Node: Data Hub */}
+                      <div style={{
+                        background: 'rgba(255, 255, 255, 0.85)',
+                        backdropFilter: 'blur(20px)',
+                        border: '1px solid rgba(24, 144, 255, 0.3)',
+                        boxShadow: '0 12px 32px rgba(24, 144, 255, 0.1)',
+                        borderRadius: '20px',
+                        padding: '30px 20px',
+                        width: '180px',
+                        textAlign: 'center',
+                        zIndex: 2,
+                        position: 'relative'
+                      }}>
+                        <DatabaseOutlined style={{ fontSize: '48px', color: '#1890ff', filter: 'drop-shadow(0 4px 12px rgba(24,144,255,0.3))', marginBottom: '16px' }} />
+                        <div style={{ fontSize: '15px', fontWeight: 'bold', color: '#0b1a30', lineHeight: 1.6 }}>
+                          新华三算力中枢<br/>
+                          <span style={{ color: '#1890ff', fontSize: '18px', fontWeight: '900', margin: '4px 0', display: 'inline-block' }}>×</span><br/>
+                          平方基础设施
+                        </div>
                       </div>
                       
-                      <div style={{ flexGrow: 1, position: 'relative', height: '140px', margin: '0 20px' }}>
+                      {/* Middle Connectors */}
+                      <div style={{ flexGrow: 1, position: 'relative', height: '200px', margin: '0 40px', display: 'flex', flexDirection: 'column', justifyContent: 'space-around' }}>
                         {/* Top Arrow: Compute Out */}
-                        <div style={{ position: 'absolute', top: '15px', left: '0', right: '0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                          <span style={{ fontSize: '14px', color: '#1890ff', fontWeight: 600, marginBottom: '8px' }}>算力出去：高效支持系统</span>
-                          <div style={{ width: '100%', height: '3px', background: '#e6f7ff', position: 'relative', borderRadius: '2px', overflow: 'hidden' }}>
+                        <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                          <span style={{ fontSize: '14px', color: '#1890ff', fontWeight: 600, marginBottom: '12px', letterSpacing: '1px' }}>算力出去：高效支持系统</span>
+                          <div style={{ width: '100%', height: '4px', background: 'rgba(24,144,255,0.1)', position: 'relative', borderRadius: '2px', overflow: 'hidden' }}>
                             <motion.div 
-                              initial={{ x: '-10%', opacity: 0 }}
-                              animate={{ x: '110%', opacity: [0, 1, 1, 0] }}
-                              transition={{ repeat: Infinity, duration: 2.5, ease: "linear" }}
-                              style={{ width: '40%', height: '3px', background: 'linear-gradient(90deg, transparent, #1890ff)', position: 'absolute', left: 0 }}
+                              initial={{ x: '-100%' }}
+                              animate={{ x: '100%' }}
+                              transition={{ repeat: Infinity, duration: 2, ease: "linear" }}
+                              style={{ width: '50%', height: '100%', background: 'linear-gradient(90deg, transparent, #1890ff, #40a9ff, transparent)', position: 'absolute', left: 0 }}
                             />
                           </div>
-                          <ArrowRightOutlined style={{ position: 'absolute', right: '-10px', color: '#1890ff', top: '30px', fontSize: '18px' }} />
+                          <ArrowRightOutlined style={{ position: 'absolute', right: '-10px', color: '#1890ff', top: '32px', fontSize: '18px' }} />
                         </div>
                         
                         {/* Bottom Arrow: Data In */}
-                        <div style={{ position: 'absolute', bottom: '15px', left: '0', right: '0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                          <ArrowLeftOutlined style={{ position: 'absolute', left: '-10px', color: '#52c41a', top: '-12px', fontSize: '18px' }} />
-                          <div style={{ width: '100%', height: '3px', background: '#f6ffed', position: 'relative', borderRadius: '2px', overflow: 'hidden', marginTop: '6px' }}>
+                        <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                          <ArrowLeftOutlined style={{ position: 'absolute', left: '-10px', color: '#52c41a', top: '-14px', fontSize: '18px' }} />
+                          <div style={{ width: '100%', height: '4px', background: 'rgba(82,196,26,0.1)', position: 'relative', borderRadius: '2px', overflow: 'hidden', marginBottom: '12px' }}>
                             <motion.div 
-                              initial={{ x: '110%', opacity: 0 }}
-                              animate={{ x: '-10%', opacity: [0, 1, 1, 0] }}
-                              transition={{ repeat: Infinity, duration: 2.5, ease: "linear", delay: 1.25 }}
-                              style={{ width: '40%', height: '3px', background: 'linear-gradient(270deg, transparent, #52c41a)', position: 'absolute', left: 0 }}
+                              initial={{ x: '100%' }}
+                              animate={{ x: '-100%' }}
+                              transition={{ repeat: Infinity, duration: 2.5, ease: "linear", delay: 0.5 }}
+                              style={{ width: '50%', height: '100%', background: 'linear-gradient(270deg, transparent, #52c41a, #73d13d, transparent)', position: 'absolute', left: 0 }}
                             />
                           </div>
-                          <span style={{ fontSize: '14px', color: '#52c41a', fontWeight: 600, marginTop: '8px' }}>数据回来：用好高价值数据</span>
+                          <span style={{ fontSize: '14px', color: '#52c41a', fontWeight: 600, letterSpacing: '1px' }}>数据回来：用好高价值数据</span>
                         </div>
                       </div>
                       
-                      <div style={{ textAlign: 'center', padding: '20px 15px', background: '#fff', borderRadius: '12px', boxShadow: '0 8px 24px rgba(0,0,0,0.06)', width: '150px', zIndex: 2, border: '1px solid #e8e8e8' }}>
-                        <AppstoreOutlined style={{ fontSize: '36px', color: '#722ed1', marginBottom: '12px' }} />
-                        <div style={{ fontSize: '16px', fontWeight: 'bold', color: '#0b1a30' }}>硬件业务终端</div>
+                      {/* Right Nodes: Terminals */}
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', zIndex: 2, width: '240px' }}>
+                        {/* Large Node */}
+                        <div style={{
+                          background: 'rgba(255, 255, 255, 0.95)',
+                          border: '1px solid rgba(114, 46, 209, 0.3)',
+                          boxShadow: '0 8px 24px rgba(114, 46, 209, 0.08)',
+                          borderRadius: '16px',
+                          padding: '16px 20px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '12px',
+                          transform: 'translateX(-20px)',
+                          transition: 'all 0.3s'
+                        }}>
+                          <AppstoreOutlined style={{ fontSize: '26px', color: '#722ed1' }} />
+                          <div style={{ fontSize: '14px', fontWeight: 'bold', color: '#0b1a30' }}>硬件+软件+AI集成终端</div>
+                        </div>
+
+                        {/* Medium Node */}
+                        <div style={{
+                          background: 'rgba(255, 255, 255, 0.9)',
+                          border: '1px solid rgba(235, 47, 150, 0.3)',
+                          boxShadow: '0 6px 16px rgba(235, 47, 150, 0.06)',
+                          borderRadius: '12px',
+                          padding: '12px 16px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '10px',
+                        }}>
+                          <CloudServerOutlined style={{ fontSize: '22px', color: '#eb2f96' }} />
+                          <div style={{ fontSize: '13px', fontWeight: 'bold', color: '#333' }}>云端部署软件+AI</div>
+                        </div>
+
+                        {/* Small Node */}
+                        <div style={{
+                          background: 'rgba(255, 255, 255, 0.85)',
+                          border: '1px solid rgba(82, 196, 26, 0.3)',
+                          boxShadow: '0 4px 12px rgba(82, 196, 26, 0.04)',
+                          borderRadius: '10px',
+                          padding: '10px 14px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '8px',
+                          transform: 'translateX(20px)',
+                        }}>
+                          <ClusterOutlined style={{ fontSize: '18px', color: '#52c41a' }} />
+                          <div style={{ fontSize: '12px', fontWeight: 'bold', color: '#555' }}>智能体产品</div>
+                        </div>
                       </div>
                     </div>
                   </motion.div>
