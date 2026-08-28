@@ -176,12 +176,12 @@ const App: React.FC = () => {
             <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                 <HeartOutlined style={{ fontSize: '48px', color: '#ff4d4f', marginBottom: '24px' }} />
-                <Title level={2} style={{ color: '#0b1a30', margin: 0 }}>让硬件与算力，与“人”产生更多可能</Title>
+                <Title level={2} style={{ color: '#0b1a30', margin: 0 }}>具脑 + 具心 = 真正的以人为本</Title>
                 <Paragraph style={{ color: '#555', fontSize: '18px', lineHeight: 1.8, marginTop: '30px', textAlign: 'justify', textIndent: '2em' }}>
-                  基于平方创想独有的<Text strong style={{ color: '#1890ff' }}>“认知图谱（Learning Graph）”</Text>与长周期伴随记忆，硬件终端将不再是每次开机都要“重置”的冰冷工具，而是能懂人、记忆人、陪伴人成长的“知心伙伴”。
+                  在追逐冰冷算力和机械躯体的时代，我们坚信：<Text strong style={{ color: '#1890ff', fontSize: '18px' }}>关注“人”、服务“人”、打动“人”</Text>，才是科技硬件的终极归宿。
                 </Paragraph>
                 <Paragraph style={{ color: '#555', fontSize: '18px', lineHeight: 1.8, textAlign: 'justify', textIndent: '2em' }}>
-                  这种智能的注入，将创造更高频次的人机交互。借着与硬件中智能的深度 Bonding，用户将获得与硬件本身的品牌 Bonding。他们建立起的不仅是对机器专业性的认可，对底层安全数据的信任，更是对新华三数字基础设施难以割舍的使用粘性。
+                  只有当硬件具备了垂直深度的专业“大脑”（精准诊断、智慧决策），同时又拥有了能够长期记忆、持续共情的“心脏”（伴随成长、懂你所需），那些堆砌在机房里的算力与数据，才能真正转化为改变千行百业、温润千家万户的数字生命力。这不仅是硬件形态的升级，更是重塑硬件与人互动关系的哲学跨越。
                 </Paragraph>
               </motion.div>
             </div>
@@ -454,6 +454,22 @@ const App: React.FC = () => {
                     }
                   ]}
                 />
+              </motion.div>
+            </div>
+          </section>
+
+          {/* Bonding Section (Let Hardware Connect with People) */}
+          <section className="section-padding bg-light-pattern" style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', backgroundBlendMode: 'overlay', borderBottom: '1px solid #e8e8e8' }}>
+            <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                <ClusterOutlined style={{ fontSize: '48px', color: '#1890ff', marginBottom: '24px' }} />
+                <Title level={2} style={{ color: '#0b1a30', margin: 0 }}>让硬件与算力，与“人”产生更多可能</Title>
+                <Paragraph style={{ color: '#555', fontSize: '18px', lineHeight: 1.8, marginTop: '30px', textAlign: 'justify', textIndent: '2em' }}>
+                  基于平方创想独有的<Text strong style={{ color: '#1890ff' }}>“认知图谱（Learning Graph）”</Text>与长周期伴随记忆，硬件终端将不再是每次开机都要“重置”的冰冷工具，而是能懂人、记忆人、陪伴人成长的“知心伙伴”。
+                </Paragraph>
+                <Paragraph style={{ color: '#555', fontSize: '18px', lineHeight: 1.8, textAlign: 'justify', textIndent: '2em' }}>
+                  这种智能的注入，将创造更高频次的人机交互。借着与硬件中智能的深度 Bonding，用户将获得与硬件本身的品牌 Bonding。他们建立起的不仅是对机器专业性的认可，对底层安全数据的信任，更是对新华三数字基础设施难以割舍的使用粘性。
+                </Paragraph>
               </motion.div>
             </div>
           </section>
