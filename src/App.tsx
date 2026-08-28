@@ -129,53 +129,63 @@ const App: React.FC = () => {
             </div>
           </section>
 
-          {/* Section 2: 具脑与具心 (Shared Light Aurora Screen) */}
+          {/* Section 2: 具脑与具心 (Shared Staggered Layout) */}
           <section style={{ 
             minHeight: '100vh', 
-            backgroundImage: "url('./light_aurora_bg.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            background: 'radial-gradient(circle at top left, #ffffff, #f2f7fc, #fafafa)',
             display: 'flex', 
             flexDirection: 'column',
             justifyContent: 'center',
-            padding: '80px 24px',
+            padding: '100px 24px',
             position: 'relative'
           }}>
-            <div style={{ maxWidth: '1400px', margin: '0 auto', width: '100%' }}>
-              <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+            <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
+              <div style={{ textAlign: 'center', marginBottom: '100px' }}>
                 <Title level={2} style={{ color: '#0b1a30', fontSize: '3rem' }}>具脑与具心：打破同质化的全新战略</Title>
                 <Paragraph style={{ color: '#555', fontSize: '1.2rem', margin: 0 }}>智能化时代真基建——以人为本，软硬兼济，赋能行业核心价值</Paragraph>
               </div>
-              <Row align="top" gutter={[48, 48]}>
-                {/* 具脑硬件 - Left side */}
-                <Col xs={24} lg={12} style={{ textAlign: 'center' }}>
+              
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
+                
+                {/* Top Left: Brain Text */}
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', paddingRight: '40px' }}>
                   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                    <img src="./hardware_brain.png" alt="Hardware Brain" style={{ width: '100%', maxWidth: '600px', margin: '0 auto', display: 'block', filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.15))' }} />
-                    <Title style={{ color: '#0b1a30', fontSize: '2.5rem', marginTop: '40px' }}>
-                      <span className="title-gradient-dark">具脑硬件</span>
-                    </Title>
-                    <Paragraph style={{ color: '#555', fontSize: '1.2rem', lineHeight: 2, padding: '0 20px' }}>
+                    <Title level={2} style={{ color: '#333', fontSize: '2.5rem', margin: 0 }}>具脑硬件</Title>
+                    <Paragraph style={{ color: '#666', fontSize: '1rem', lineHeight: 1.8, marginTop: '20px' }}>
                       让硬件搭载的AI更好、更垂直，更适合目前高风险、高利害的教育政务行业。
-                      <br/><br/>
+                      <br/>
                       深谙行业规则、聚焦行业“人”的要素，能够主动作出专业诊断、助力决策的“行业专家大脑”。
                     </Paragraph>
+                    <div style={{ width: '1px', height: '100px', background: '#ccc', margin: '20px 0 0 20px' }}></div>
                   </motion.div>
-                </Col>
-                {/* 具心算力 - Right side */}
-                <Col xs={24} lg={12} style={{ textAlign: 'center' }}>
+                </div>
+                
+                {/* Top Right: Heart Image */}
+                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <img src="./heart_compute_light.png" alt="Heart Compute" style={{ width: '100%', maxWidth: '350px', mixBlendMode: 'multiply' }} />
+                    <div style={{ width: '1px', height: '100px', background: '#ccc', marginTop: '20px', alignSelf: 'flex-start', marginLeft: '60px' }}></div>
+                  </motion.div>
+                </div>
+
+                {/* Bottom Left: Brain Image */}
+                <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '-40px' }}>
                   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                    <img src="./heart_compute_light.png" alt="Heart Compute" style={{ width: '100%', maxWidth: '500px', margin: '0 auto', display: 'block', filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.08))', mixBlendMode: 'multiply' }} />
-                    <Title style={{ color: '#0b1a30', fontSize: '2.5rem', marginTop: '40px' }}>
-                      <span style={{ color: '#d4af37' }}>具心算力</span>
-                    </Title>
-                    <Paragraph style={{ color: '#555', fontSize: '1.2rem', lineHeight: 2, padding: '0 20px' }}>
-                      算力不应只是用来跑数据的计算器，而是有理解、有方向、有效率的生命体。
-                      <br/><br/>
-                      代表着人工智能在垂直场景下的记忆、交流、共情与正向反馈机制。
+                    <img src="./hardware_brain.png" alt="Hardware Brain" style={{ width: '100%', maxWidth: '500px' }} />
+                  </motion.div>
+                </div>
+                
+                {/* Bottom Right: Heart Text */}
+                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', paddingLeft: '40px', marginTop: '-40px' }}>
+                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                    <Title level={2} style={{ color: '#333', fontSize: '2.5rem', margin: 0 }}>具心算力</Title>
+                    <Paragraph style={{ color: '#666', fontSize: '1rem', lineHeight: 1.8, marginTop: '20px' }}>
+                      算力不应只是用来跑数据的计算器，而是有理解、有方向、有效率的生命体。在心脏加持下输送到有需要的组织，并形成循环供能。
                     </Paragraph>
                   </motion.div>
-                </Col>
-              </Row>
+                </div>
+
+              </div>
             </div>
           </section>
 
