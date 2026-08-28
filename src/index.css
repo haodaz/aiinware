@@ -69,3 +69,64 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+/* H5 / Mobile Optimizations */
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 40px 0 !important;
+  }
+  h1.ant-typography {
+    font-size: 2.2rem !important;
+  }
+  h2.ant-typography {
+    font-size: 1.8rem !important;
+  }
+  .hero-content {
+    padding-top: 100px !important;
+  }
+  .hero-content p {
+    font-size: 1.1rem !important;
+  }
+  .scenario-tabs-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start !important;
+    padding: 0 16px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .scenario-tabs-container::-webkit-scrollbar {
+    display: none;
+  }
+  .scenario-tabs-wrapper {
+    margin-bottom: 20px !important;
+  }
+  .scenario-hero-container {
+    height: 200px !important;
+  }
+  .scenario-hero-container h2 {
+    font-size: 1.2rem !important;
+    bottom: 20px !important;
+    left: 20px !important;
+  }
+  .scenario-hero-container p {
+    font-size: 0.9rem !important;
+    display: none; /* Hide subtitle on very small screens to save space */
+  }
+  .scenario-content-padding {
+    padding: 24px 20px !important;
+  }
+  .glass-card {
+    padding: 16px !important;
+  }
+  p.ant-typography {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+  }
+  /* Fix circulation chart text sizes */
+  .circulation-title {
+    font-size: 1.2rem !important;
+  }
+  .circulation-desc {
+    font-size: 0.9rem !important;
+  }
+}

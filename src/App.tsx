@@ -205,7 +205,7 @@ const App: React.FC = () => {
                   </Paragraph>
                   
                   <Paragraph style={{ color: '#444', fontSize: '1.4rem', lineHeight: 2, margin: 0, textIndent: '2em' }}>
-                    当算力拥有了“心脏”，它将不再是无差别消耗的资源，而是被智能精准调度的源泉。通过软件与平台的管线，算力紧密围绕人的核心需求，源源不断地转化为有价值的数据、知识与智能应用。它被那些与人最贴近的真实场景需求所驱动，而在平方创想数字基础设施的加持下，这种需求反馈更促成了算力价值的生生不息与闭环流转。
+                    当算力拥有了“心脏”，它将不再是无差别消耗的资源，而是被智能精准调度的源泉。通过工作台与智能体，算力紧密围绕人的核心需求，源源不断地转化为有价值的数据、知识与智能应用。它被那些与人最贴近的真实场景需求所驱动，而在平方创想数字基础设施的加持下，这种需求反馈更促成了算力价值的生生不息与闭环流转。
                   </Paragraph>
                 </div>
               </motion.div>
@@ -345,7 +345,7 @@ const App: React.FC = () => {
                 <div style={{ marginTop: '100px', borderTop: '1px solid #e8e8e8', paddingTop: '80px' }}>
                   <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                     <Title level={2} style={{ color: '#333', fontSize: '2rem' }}>给硬件一个“可信任”的大脑</Title>
-                    <Paragraph style={{ color: '#666', fontSize: '1.2rem', marginTop: 10 }}>在高容错、高责任的领域，我们需要“可信任”的智慧大脑。</Paragraph>
+                    <Paragraph style={{ color: '#666', fontSize: '1.2rem', marginTop: 10 }}>在高容错、高责任、小数据的领域，我们需要“可信任”的智慧大脑。</Paragraph>
                   </div>
                   
                   <Row gutter={[32, 32]} align="stretch">
@@ -688,8 +688,8 @@ const App: React.FC = () => {
                 </div>
               </motion.div>
 
-              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '40px' }}>
-                <div style={{ display: 'flex', background: '#f5f5f5', padding: '6px', borderRadius: '40px', gap: '8px' }}>
+              <div className="scenario-tabs-wrapper" style={{ display: 'flex', justifyContent: 'center', marginBottom: '40px' }}>
+                <div className="scenario-tabs-container" style={{ display: 'flex', background: '#f5f5f5', padding: '6px', borderRadius: '40px', gap: '8px' }}>
                   {(['tog', 'tos', 'tob', 'toc'] as const).map(tab => {
                     const isActive = activeScenarioTab === tab;
                     let label = '';
@@ -729,7 +729,7 @@ const App: React.FC = () => {
               >
                 {activeScenarioTab === 'tog' && (
                   <div style={{ background: '#fff', borderRadius: '24px', overflow: 'hidden', border: '1px solid #e6f7ff', boxShadow: '0 20px 60px rgba(0,0,0,0.05)' }}>
-                    <div style={{ height: '360px', width: '100%', position: 'relative' }}>
+                    <div className="scenario-hero-container" style={{ height: '360px', width: '100%', position: 'relative' }}>
                       <img src="/images/scenarios/tog.png" alt="Government Data Brain" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, transparent 100%)' }} />
                       <div style={{ position: 'absolute', bottom: '40px', left: '50px' }}>
@@ -737,7 +737,7 @@ const App: React.FC = () => {
                         <Paragraph style={{ color: 'rgba(255,255,255,0.85)', fontSize: '16px', margin: '12px 0 0 0' }}>全局视野下的高容错率政务决策支撑，洞察全球科技人才流向</Paragraph>
                       </div>
                     </div>
-                    <div style={{ padding: '40px 50px' }}>
+                    <div className="scenario-content-padding" style={{ padding: '40px 50px' }}>
                       <Row gutter={[40, 40]}>
                         <Col xs={24} md={12}>
                           <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
@@ -768,7 +768,7 @@ const App: React.FC = () => {
 
                 {activeScenarioTab === 'tos' && (
                   <div style={{ background: '#fff', borderRadius: '24px', overflow: 'hidden', border: '1px solid #d9f7be', boxShadow: '0 20px 60px rgba(0,0,0,0.05)' }}>
-                    <div style={{ height: '360px', width: '100%', position: 'relative' }}>
+                    <div className="scenario-hero-container" style={{ height: '360px', width: '100%', position: 'relative' }}>
                       <img src="/images/scenarios/tos.png" alt="University Campus" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, transparent 100%)' }} />
                       <div style={{ position: 'absolute', bottom: '40px', left: '50px' }}>
@@ -776,7 +776,7 @@ const App: React.FC = () => {
                         <Paragraph style={{ color: 'rgba(255,255,255,0.85)', fontSize: '16px', margin: '12px 0 0 0' }}>从生涯启蒙到就业冲刺，全周期的教育管家</Paragraph>
                       </div>
                     </div>
-                    <div style={{ padding: '40px 50px' }}>
+                    <div className="scenario-content-padding" style={{ padding: '40px 50px' }}>
                       <Row gutter={[40, 40]}>
                         <Col xs={24} md={12}>
                           <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
@@ -807,7 +807,7 @@ const App: React.FC = () => {
 
                 {activeScenarioTab === 'tob' && (
                   <div style={{ background: '#fff', borderRadius: '24px', overflow: 'hidden', border: '1px solid #ffadd2', boxShadow: '0 20px 60px rgba(0,0,0,0.05)' }}>
-                    <div style={{ height: '360px', width: '100%', position: 'relative' }}>
+                    <div className="scenario-hero-container" style={{ height: '360px', width: '100%', position: 'relative' }}>
                       <img src="/images/scenarios/tob.png" alt="Corporate Recruitment" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, transparent 100%)' }} />
                       <div style={{ position: 'absolute', bottom: '40px', left: '50px' }}>
@@ -815,7 +815,7 @@ const App: React.FC = () => {
                         <Paragraph style={{ color: 'rgba(255,255,255,0.85)', fontSize: '16px', margin: '12px 0 0 0' }}>降本增效的智能引擎，提升组织核心人才密度</Paragraph>
                       </div>
                     </div>
-                    <div style={{ padding: '40px 50px' }}>
+                    <div className="scenario-content-padding" style={{ padding: '40px 50px' }}>
                       <Row gutter={[40, 40]}>
                         <Col xs={24} md={16}>
                           <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
@@ -844,7 +844,7 @@ const App: React.FC = () => {
 
                 {activeScenarioTab === 'toc' && (
                   <div style={{ background: '#fff', borderRadius: '24px', overflow: 'hidden', border: '1px solid #ffd666', boxShadow: '0 20px 60px rgba(0,0,0,0.05)' }}>
-                    <div style={{ height: '360px', width: '100%', position: 'relative' }}>
+                    <div className="scenario-hero-container" style={{ height: '360px', width: '100%', position: 'relative' }}>
                       <img src="/images/scenarios/toc.png" alt="Family Educational Companion" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, transparent 100%)' }} />
                       <div style={{ position: 'absolute', bottom: '40px', left: '50px' }}>
@@ -852,7 +852,7 @@ const App: React.FC = () => {
                         <Paragraph style={{ color: 'rgba(255,255,255,0.85)', fontSize: '16px', margin: '12px 0 0 0' }}>长周期陪伴的私密教育管家与情感羁绊</Paragraph>
                       </div>
                     </div>
-                    <div style={{ padding: '40px 50px' }}>
+                    <div className="scenario-content-padding" style={{ padding: '40px 50px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
                         <HomeOutlined style={{ fontSize: '32px', color: '#faad14', marginRight: '16px' }} />
                         <Title level={4} style={{ color: '#0b1a30', margin: 0 }}>大中衔接、长周期伴随与终身学习</Title>
