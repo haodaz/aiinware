@@ -55,3 +55,17 @@ body {
 .logo-white {
   filter: brightness(0) invert(1);
 }
+
+.bg-hero {
+  background-image: url('/hero_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-light-pattern {
+  background-image: url('/light_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

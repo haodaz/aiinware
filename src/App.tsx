@@ -77,7 +77,7 @@ const App: React.FC = () => {
 
         <Content>
           {/* Hero Section (Keep Dark for Impact) */}
-          <section style={{ 
+          <section className="bg-hero" style={{ 
             minHeight: '100vh', 
             display: 'flex', 
             alignItems: 'center', 
@@ -85,7 +85,8 @@ const App: React.FC = () => {
             position: 'relative',
             overflow: 'hidden',
             paddingTop: '64px',
-            background: '#050b14'
+            backgroundColor: 'rgba(5, 11, 20, 0.7)',
+            backgroundBlendMode: 'overlay'
           }}>
             <div style={{
               position: 'absolute',
@@ -138,7 +139,7 @@ const App: React.FC = () => {
           </section>
 
           {/* Vision Section: Brain and Heart (Light Theme) */}
-          <section className="section-padding" style={{ background: '#ffffff' }}>
+          <section className="section-padding bg-light-pattern" style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', backgroundBlendMode: 'overlay' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
                 <div style={{ textAlign: 'center', marginBottom: '60px' }}>
@@ -179,7 +180,7 @@ const App: React.FC = () => {
           </section>
 
           {/* Philosophy Section */}
-          <section className="section-padding" style={{ background: '#f5f7fa', borderBottom: '1px solid #e8e8e8' }}>
+          <section className="section-padding bg-light-pattern" style={{ backgroundColor: 'rgba(245, 247, 250, 0.85)', backgroundBlendMode: 'overlay', borderBottom: '1px solid #e8e8e8' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                 <HeartOutlined style={{ fontSize: '48px', color: '#ff4d4f', marginBottom: '24px' }} />
@@ -195,7 +196,7 @@ const App: React.FC = () => {
           </section>
 
           {/* Value Prop Table (Light Theme) */}
-          <section className="section-padding" style={{ background: '#ffffff' }}>
+          <section className="section-padding bg-light-pattern" style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', backgroundBlendMode: 'overlay' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 24px' }}>
                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                 <div style={{ textAlign: 'center', marginBottom: '60px' }}>
@@ -226,7 +227,7 @@ const App: React.FC = () => {
           </section>
 
           {/* NEW SECTION 1: 核心壁垒 —— 行业垂直基础设施与深度 Know-how */}
-          <section className="section-padding" style={{ background: '#fafbfc' }}>
+          <section className="section-padding bg-light-pattern" style={{ backgroundColor: 'rgba(250, 251, 252, 0.9)', backgroundBlendMode: 'overlay' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                 <div style={{ textAlign: 'center', marginBottom: '60px' }}>
@@ -276,7 +277,7 @@ const App: React.FC = () => {
           </section>
 
           {/* NEW SECTION 2: 全矩阵硬件赋能 */}
-          <section className="section-padding" style={{ background: '#ffffff', borderTop: '1px solid #f0f0f0' }}>
+          <section className="section-padding bg-light-pattern" style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', backgroundBlendMode: 'overlay', borderTop: '1px solid #f0f0f0' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                 <div style={{ textAlign: 'center', marginBottom: '60px' }}>
@@ -333,7 +334,7 @@ const App: React.FC = () => {
           </section>
 
           {/* Sales Engine (Light Theme) */}
-          <section className="section-padding" style={{ background: '#f5f7fa' }}>
+          <section className="section-padding bg-light-pattern" style={{ backgroundColor: 'rgba(245, 247, 250, 0.9)', backgroundBlendMode: 'overlay' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                 <div style={{ textAlign: 'center', marginBottom: '60px' }}>
@@ -390,7 +391,7 @@ const App: React.FC = () => {
           </section>
 
           {/* Use Cases (Light Theme) */}
-          <section className="section-padding" style={{ background: '#ffffff' }}>
+          <section className="section-padding bg-light-pattern" style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', backgroundBlendMode: 'overlay' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                 <div style={{ textAlign: 'center', marginBottom: '60px' }}>
