@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Layout, Typography, Card, Row, Col, Button, Tag, Space, Timeline, ConfigProvider, theme } from 'antd';
+import { Layout, Typography, Card, Row, Col, Tag, Space, Timeline, ConfigProvider, theme } from 'antd';
 import { 
   SafetyOutlined, 
   ClusterOutlined, 
@@ -61,17 +61,17 @@ const App: React.FC = () => {
             width: '100%', 
             display: 'flex', 
             alignItems: 'center',
-            background: scrolled ? 'rgba(5, 11, 20, 0.95)' : 'transparent',
+            background: scrolled ? 'rgba(255, 255, 255, 0.95)' : 'transparent',
             backdropFilter: scrolled ? 'blur(10px)' : 'none',
-            borderBottom: scrolled ? '1px solid rgba(255,255,255,0.1)' : 'none',
+            borderBottom: scrolled ? '1px solid rgba(0,0,0,0.05)' : 'none',
             transition: 'all 0.3s ease',
             padding: '0 50px'
           }}
         >
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <img src="./h3c-logo.png" alt="H3C" height="24" className="logo-white" />
-            <span style={{ color: '#888', fontSize: '20px' }}>×</span> 
-            <img src="./pf-logo.png" alt="Square Create" height="28" className="logo-white" />
+            <img src="./h3c-logo.png" alt="H3C" height="24" className={scrolled ? '' : 'logo-white'} />
+            <span style={{ color: scrolled ? '#333' : '#888', fontSize: '20px' }}>×</span> 
+            <img src="./pf-logo.png" alt="Square Create" height="28" className={scrolled ? '' : 'logo-white'} />
           </div>
         </Header>
 
@@ -119,20 +119,12 @@ const App: React.FC = () => {
                     <span style={{ color: '#fff' }}>智算筑基，</span>
                     <span className="title-gradient">行业生慧</span>
                   </Title>
-                  <Title level={2} style={{ color: '#888', fontWeight: 300, marginTop: 0 }}>
-                    超越传统计算，打造 <Text style={{ color: '#d4af37', fontWeight: 600 }}>具脑与具心</Text> 的新一代数字基础设施
+                  <Title level={2} style={{ color: '#888', fontWeight: 300, marginTop: 10 }}>
+                    超越传统计算，打造 <Text style={{ color: '#d4af37', fontWeight: 600, fontSize: '2.5rem', margin: '0 8px' }}>具脑与具心</Text> 的新一代数字基础设施
                   </Title>
-                  <Paragraph style={{ fontSize: '1.2rem', color: '#aaa', maxWidth: '800px', margin: '24px auto' }}>
-                    当“最强健的算力与网络神经系统”遇见“最懂教育科技人才的大脑”。新华三携手平方创想，以人为本，给冷冰冰的钢铁机器注入专业大脑与共情心脏，开创以AI为牵引的算力销售新纪元。
+                  <Paragraph style={{ fontSize: '1.2rem', color: '#bbb', maxWidth: '900px', margin: '32px auto 0 auto', lineHeight: 1.8 }}>
+                    共同践行“科技求真、以人为本”理念。依托平方创想在教育、科技、人才领域的垂直数字基础设施与深厚行业 Know-how，深度赋能新华三算力底座，让硬件焕发业务生机。以真实的垂直切入价值，带动底层基础设施与服务的大规模部署，携手进入千行百业与千家万户。
                   </Paragraph>
-                  <Space size="middle" style={{ marginTop: '20px' }}>
-                    <Button type="primary" size="large" style={{ borderRadius: '8px', padding: '0 32px', height: '48px', fontSize: '16px' }}>
-                      探索战略矩阵
-                    </Button>
-                    <Button ghost size="large" style={{ borderRadius: '8px', padding: '0 32px', height: '48px', fontSize: '16px', color: '#fff', borderColor: '#fff' }}>
-                      观看合作愿景
-                    </Button>
-                  </Space>
                 </Space>
               </motion.div>
             </div>
