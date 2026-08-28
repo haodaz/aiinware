@@ -178,8 +178,24 @@ const App: React.FC = () => {
             </div>
           </section>
 
+          {/* Philosophy Section */}
+          <section className="section-padding" style={{ background: '#f5f7fa', borderBottom: '1px solid #e8e8e8' }}>
+            <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                <HeartOutlined style={{ fontSize: '48px', color: '#ff4d4f', marginBottom: '24px' }} />
+                <Title level={2} style={{ color: '#0b1a30', margin: 0 }}>具脑 + 具心 = 真正的以人为本</Title>
+                <Paragraph style={{ color: '#555', fontSize: '18px', lineHeight: 1.8, marginTop: '30px', textAlign: 'justify', textIndent: '2em' }}>
+                  在追逐冰冷算力和机械躯体的时代，我们坚信：<Text strong style={{ color: '#1890ff', fontSize: '18px' }}>关注“人”、服务“人”、打动“人”</Text>，才是科技硬件的终极归宿。
+                </Paragraph>
+                <Paragraph style={{ color: '#555', fontSize: '18px', lineHeight: 1.8, textAlign: 'justify', textIndent: '2em' }}>
+                  只有当硬件具备了垂直深度的专业“大脑”（精准诊断、智慧决策），同时又拥有了能够长期记忆、持续共情的“心脏”（伴随成长、懂你所需），那些堆砌在机房里的算力与数据，才能真正转化为改变千行百业、温润千家万户的数字生命力。这不仅是硬件形态的升级，更是重塑硬件与人互动关系的哲学跨越。
+                </Paragraph>
+              </motion.div>
+            </div>
+          </section>
+
           {/* Value Prop Table (Light Theme) */}
-          <section className="section-padding" style={{ background: '#f5f7fa' }}>
+          <section className="section-padding" style={{ background: '#ffffff' }}>
             <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 24px' }}>
                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                 <div style={{ textAlign: 'center', marginBottom: '60px' }}>
@@ -210,7 +226,7 @@ const App: React.FC = () => {
           </section>
 
           {/* Sales Engine (Light Theme) */}
-          <section className="section-padding" style={{ background: '#ffffff' }}>
+          <section className="section-padding" style={{ background: '#f5f7fa' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                 <div style={{ textAlign: 'center', marginBottom: '60px' }}>
@@ -267,7 +283,7 @@ const App: React.FC = () => {
           </section>
 
           {/* Use Cases (Light Theme) */}
-          <section className="section-padding" style={{ background: '#f5f7fa' }}>
+          <section className="section-padding" style={{ background: '#ffffff' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                 <div style={{ textAlign: 'center', marginBottom: '60px' }}>
@@ -282,9 +298,9 @@ const App: React.FC = () => {
                   items={[
                     {
                       color: '#1890ff',
-                      dot: <BankOutlined style={{ fontSize: '24px', background: '#f5f7fa', padding: '4px' }} />,
+                      dot: <BankOutlined style={{ fontSize: '24px', background: '#fff', padding: '4px' }} />,
                       children: (
-                        <Card className="glass-card" bordered={false} style={{ textAlign: 'left', marginBottom: '20px', background: '#fff', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+                        <Card className="glass-card" bordered={false} style={{ textAlign: 'left', marginBottom: '20px', background: '#fff', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', border: '1px solid #f0f0f0' }}>
                           <Title level={4} style={{ color: '#1890ff', marginTop: 0 }}>政务场景：区域科技人才数字大脑</Title>
                           <Paragraph style={{ color: '#555' }}>
                             <Text strong style={{ color: '#333' }}>硬件底座：</Text> 新华三政务私有云与算力节点<br/>
@@ -296,9 +312,9 @@ const App: React.FC = () => {
                     },
                     {
                       color: '#d4af37',
-                      dot: <TeamOutlined style={{ fontSize: '24px', background: '#f5f7fa', padding: '4px', color: '#d4af37' }} />,
+                      dot: <TeamOutlined style={{ fontSize: '24px', background: '#fff', padding: '4px', color: '#d4af37' }} />,
                       children: (
-                        <Card className="glass-card" bordered={false} style={{ textAlign: 'left', marginBottom: '20px', background: '#fff', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+                        <Card className="glass-card" bordered={false} style={{ textAlign: 'left', marginBottom: '20px', background: '#fff', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', border: '1px solid #f0f0f0' }}>
                           <Title level={4} style={{ color: '#d4af37', marginTop: 0 }}>大型企业：企业级数字内生导师</Title>
                           <Paragraph style={{ color: '#555' }}>
                             <Text strong style={{ color: '#333' }}>硬件底座：</Text> 新华三灵犀智算一体机<br/>
@@ -310,9 +326,9 @@ const App: React.FC = () => {
                     },
                     {
                       color: '#1890ff',
-                      dot: <SafetyOutlined style={{ fontSize: '24px', background: '#f5f7fa', padding: '4px' }} />,
+                      dot: <SafetyOutlined style={{ fontSize: '24px', background: '#fff', padding: '4px' }} />,
                       children: (
-                        <Card className="glass-card" bordered={false} style={{ textAlign: 'left', marginBottom: '20px', background: '#fff', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+                        <Card className="glass-card" bordered={false} style={{ textAlign: 'left', marginBottom: '20px', background: '#fff', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', border: '1px solid #f0f0f0' }}>
                           <Title level={4} style={{ color: '#1890ff', marginTop: 0 }}>院校场景：校级一网通办与数字辅导员</Title>
                           <Paragraph style={{ color: '#555' }}>
                             <Text strong style={{ color: '#333' }}>硬件底座：</Text> 新华三智慧校园网络与边缘服务器<br/>
@@ -324,9 +340,9 @@ const App: React.FC = () => {
                     },
                     {
                       color: '#d4af37',
-                      dot: <HomeOutlined style={{ fontSize: '24px', background: '#f5f7fa', padding: '4px', color: '#d4af37' }} />,
+                      dot: <HomeOutlined style={{ fontSize: '24px', background: '#fff', padding: '4px', color: '#d4af37' }} />,
                       children: (
-                        <Card className="glass-card" bordered={false} style={{ textAlign: 'left', background: '#fff', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+                        <Card className="glass-card" bordered={false} style={{ textAlign: 'left', background: '#fff', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', border: '1px solid #f0f0f0' }}>
                           <Title level={4} style={{ color: '#d4af37', marginTop: 0 }}>个人家庭：知己家庭AI专属终端</Title>
                           <Paragraph style={{ color: '#555' }}>
                             <Text strong style={{ color: '#333' }}>硬件底座：</Text> 新华三家用智能路由器/智能带屏终端<br/>
@@ -341,15 +357,56 @@ const App: React.FC = () => {
               </motion.div>
             </div>
           </section>
+
+          {/* About Square Create */}
+          <section className="section-padding" style={{ background: '#0b1a30', color: '#fff' }}>
+            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                  <Title level={2} style={{ color: '#fff' }}>走进 平方创想</Title>
+                  <Paragraph style={{ color: '#a0c4ff', fontSize: '16px' }}>构建“教育、科技、人才”一体化领域的全景“可信任”基础设施</Paragraph>
+                </div>
+              </motion.div>
+
+              <Row gutter={[48, 48]}>
+                <Col xs={24} md={12}>
+                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                    <Card bordered={false} style={{ height: '100%', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '16px' }}>
+                      <Title level={4} style={{ color: '#1890ff', marginBottom: '24px' }}>平方的能力与核心身位</Title>
+                      <ul style={{ color: '#ddd', fontSize: '15px', lineHeight: 2.2, paddingLeft: '20px', margin: 0 }}>
+                        <li><Text strong style={{ color: '#fff' }}>十年行业深耕：</Text>拥有涵盖国内外顶级学术与产业资源的数据积累，构建了教育-科技-人才图谱（Learning Graph & Knowledge Graph），是该垂直领域的绝对头部。</li>
+                        <li><Text strong style={{ color: '#fff' }}>可信任的数据底座：</Text>数据源权威可靠，技术架构通过国家最高教育行政部门验证，深度服务众多“双一流”高校及顶尖科研院所。</li>
+                        <li><Text strong style={{ color: '#fff' }}>全场景 AI 智能体矩阵：</Text>自主研发“知己”（个人升学）、“一答”（院校治理）、“小北”（机构赋能）等多级模型应用，已累计服务超 600 万高端人才与上千家行业机构。</li>
+                      </ul>
+                    </Card>
+                  </motion.div>
+                </Col>
+                <Col xs={24} md={12}>
+                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }}>
+                    <Card bordered={false} style={{ height: '100%', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '16px' }}>
+                      <Title level={4} style={{ color: '#d4af37', marginBottom: '24px' }}>科技求真的发展愿景</Title>
+                      <Paragraph style={{ color: '#ddd', fontSize: '16px', lineHeight: 1.9 }}>
+                        平方创想始终坚守<Text strong style={{ color: '#d4af37', fontSize: '16px' }}>“科技求真，以人为本”</Text>的初心。
+                        <br/><br/>
+                        在人工智能爆发的时代，我们认为世上最宝贵的投资是<Text strong style={{ color: '#fff' }}>“投资于人”</Text>。我们致力于用真实、专业、可信任的底层数据与智能算法，剔除信息噪音，还原每个人和每个机构的真实价值。
+                        <br/><br/>
+                        通过打造这种可信任的数字基础设施，我们希望让每一次学业规划、每一项科研探索、每一次职业抉择，都充满严谨的智慧与深厚的温度。
+                      </Paragraph>
+                    </Card>
+                  </motion.div>
+                </Col>
+              </Row>
+            </div>
+          </section>
         </Content>
 
-        <Footer style={{ textAlign: 'center', background: '#ffffff', color: '#666', padding: '40px 20px', borderTop: '1px solid #eaeaea' }}>
+        <Footer style={{ textAlign: 'center', background: '#050b14', color: '#666', padding: '40px 20px', borderTop: '1px solid #1a1a1a' }}>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '16px', marginBottom: '24px' }}>
-            <img src="./h3c-logo.png" alt="H3C" height="24" />
-            <span style={{ color: '#ccc', fontSize: '20px' }}>×</span> 
-            <img src="./pf-logo.png" alt="Square Create" height="28" />
+            <img src="./h3c-logo.png" alt="H3C" height="24" className="logo-white" />
+            <span style={{ color: '#666', fontSize: '20px' }}>×</span> 
+            <img src="./pf-logo.png" alt="Square Create" height="28" className="logo-white" />
           </div>
-          <Text style={{ color: '#888' }}>打造以人为本的新一代基础设施 | 商业合作内部演示版 v2.0</Text>
+          <Text style={{ color: '#555' }}>打造以人为本的新一代基础设施 | 商业合作内部演示版 v3.0</Text>
         </Footer>
       </Layout>
     </ConfigProvider>
