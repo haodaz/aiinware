@@ -225,6 +225,113 @@ const App: React.FC = () => {
             </div>
           </section>
 
+          {/* NEW SECTION 1: 破局 —— 通用大模型 VS 行业专精大脑 */}
+          <section className="section-padding" style={{ background: '#fafbfc' }}>
+            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                  <Title level={2} style={{ color: '#0b1a30' }}>AI赋能，不止于DeepSeek</Title>
+                  <Paragraph style={{ color: '#666', fontSize: '16px' }}>通用模型的尽头，是深入行业 Know-how 的专精大脑</Paragraph>
+                </div>
+              </motion.div>
+
+              <Row gutter={[48, 48]} align="middle">
+                <Col xs={24} md={11}>
+                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                    <Card bordered={false} style={{ background: '#fff', border: '1px solid #e8e8e8', boxShadow: '0 4px 12px rgba(0,0,0,0.02)' }}>
+                      <Title level={4} style={{ color: '#888' }}>传统赋能模式 (客户痛点)</Title>
+                      <Paragraph style={{ color: '#333', fontSize: '18px', fontWeight: 'bold' }}>
+                        通用大模型 + 灵犀使能平台 + 客户自建知识库
+                      </Paragraph>
+                      <Paragraph style={{ color: '#666', lineHeight: 1.8 }}>
+                        新华三为客户提供了极其优秀的算力底座和通用平台框架（如 LinSeer Cube）。但政教客户往往缺乏高质量的内部数据，也没有专业的算法团队去“挂载知识库”和“编排场景”。
+                        <br/><br/>
+                        <Text type="danger" strong>痛点：空有顶级算力，难以在政教核心业务层产生实际化学反应，客户买单意愿受限。</Text>
+                      </Paragraph>
+                    </Card>
+                  </motion.div>
+                </Col>
+                
+                <Col xs={24} md={2} style={{ textAlign: 'center' }}>
+                  <div style={{ color: '#ccc', fontSize: '24px', fontWeight: 'bold', fontStyle: 'italic' }}>VS</div>
+                </Col>
+
+                <Col xs={24} md={11}>
+                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }}>
+                    <Card bordered={false} style={{ background: '#fffcf5', border: '1px solid #faad14', boxShadow: '0 10px 30px rgba(250, 173, 20, 0.1)' }}>
+                      <Title level={4} style={{ color: '#d4af37' }}>平方创想联合赋能 (破局)</Title>
+                      <Paragraph style={{ color: '#333', fontSize: '18px', fontWeight: 'bold' }}>
+                        出厂预装“最强大脑”，附带 10 年优质行业数据
+                      </Paragraph>
+                      <Paragraph style={{ color: '#666', lineHeight: 1.8 }}>
+                        我们直接将平方创想深耕十年的<Text strong style={{ color: '#d4af37' }}>教育、科技、人才专属图谱</Text>和已在部委验证的成熟 Agent（“一答”、“知己”）注入灵犀大模型一体机中。
+                        <br/><br/>
+                        <Text strong style={{ color: '#d4af37' }}>优势：从“卖通用工具平台”升级为“卖即插即用、免调优的顶配行业专家”，以强大的业务 Know-how 反向拉动硬件采购。</Text>
+                      </Paragraph>
+                    </Card>
+                  </motion.div>
+                </Col>
+              </Row>
+            </div>
+          </section>
+
+          {/* NEW SECTION 2: 全矩阵硬件赋能 */}
+          <section className="section-padding" style={{ background: '#ffffff', borderTop: '1px solid #f0f0f0' }}>
+            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
+               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                  <Title level={2} style={{ color: '#0b1a30' }}>全矩阵软硬协同</Title>
+                  <Paragraph style={{ color: '#666', fontSize: '16px' }}>当算力底座遇见“具脑与具心”，重塑全线物理产品的商业价值</Paragraph>
+                </div>
+              </motion.div>
+
+              <Row gutter={[32, 32]}>
+                <Col xs={24} lg={8}>
+                   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                    <Card bordered={false} style={{ height: '100%', background: '#fff', border: '1px solid #e8e8e8' }}>
+                      <div style={{ padding: '4px 12px', background: '#f5f5f5', borderRadius: '4px', marginBottom: '20px', display: 'inline-block' }}>
+                        <Text strong style={{ color: '#555', fontSize: '12px' }}>个人 / 科室级节点</Text>
+                      </div>
+                      <Title level={4}>MegaCube 桌面工作站</Title>
+                      <Paragraph style={{ color: '#555' }}>
+                        <Text strong style={{ color: '#333' }}>硬件载体：</Text> H3C LinSeer MegaCube、边缘计算节点、商用PC。<br/><br/>
+                        <Text strong style={{ color: '#333' }}>联合形态：</Text> 搭载平方创想<Text style={{color:'#1890ff', fontWeight: 600}}>“知己”</Text>伴随模型。使这台设备不再是普通的办公电脑，而是领导桌面上的专属私密智库、家庭里的升学管家，提供长期的陪伴与记忆（具心）。
+                      </Paragraph>
+                    </Card>
+                   </motion.div>
+                </Col>
+                <Col xs={24} lg={8}>
+                   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }}>
+                    <Card bordered={false} style={{ height: '100%', background: '#fff', border: '2px solid #1890ff', boxShadow: '0 8px 24px rgba(24,144,255,0.1)' }}>
+                      <div style={{ padding: '4px 12px', background: '#e6f7ff', borderRadius: '4px', marginBottom: '20px', display: 'inline-block' }}>
+                        <Text strong style={{ color: '#1890ff', fontSize: '12px' }}>院系 / 中小政企 (重点主推)</Text>
+                      </div>
+                      <Title level={4}>LinSeer Cube 一体机</Title>
+                      <Paragraph style={{ color: '#555' }}>
+                        <Text strong style={{ color: '#333' }}>硬件载体：</Text> H3C LinSeer Cube 大模型一体机。<br/><br/>
+                        <Text strong style={{ color: '#333' }}>联合形态：</Text> 预装平方创想<Text style={{color:'#1890ff', fontWeight: 600}}>“一答”</Text>院校治理大脑。插电即享部委级验证的数据底座，结合新华三的主动安全方案，确保核心数据不出域，实现“开箱即用的智慧校务”（具脑）。
+                      </Paragraph>
+                    </Card>
+                   </motion.div>
+                </Col>
+                <Col xs={24} lg={8}>
+                   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.4 }}>
+                    <Card bordered={false} style={{ height: '100%', background: '#fff', border: '1px solid #e8e8e8' }}>
+                      <div style={{ padding: '4px 12px', background: '#f5f5f5', borderRadius: '4px', marginBottom: '20px', display: 'inline-block' }}>
+                        <Text strong style={{ color: '#555', fontSize: '12px' }}>省市级政务云 / 标杆</Text>
+                      </div>
+                      <Title level={4}>大型智算基座</Title>
+                      <Paragraph style={{ color: '#555' }}>
+                        <Text strong style={{ color: '#333' }}>硬件载体：</Text> H3C 智算集群、分布式智慧存储、智算网络 (全光网络5.0)。<br/><br/>
+                        <Text strong style={{ color: '#333' }}>联合形态：</Text> 充当区域级人才/科技大模型中枢。借助平方的宏观决策模型，支撑亿级数据高吞吐流转，打造城市级的产教融合算力网。
+                      </Paragraph>
+                    </Card>
+                   </motion.div>
+                </Col>
+              </Row>
+            </div>
+          </section>
+
           {/* Sales Engine (Light Theme) */}
           <section className="section-padding" style={{ background: '#f5f7fa' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
