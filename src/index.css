@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --primary-color: #0b1a30; /* Deep blue / H3C style */
-  --secondary-color: #1890ff; /* Antd blue */
-  --accent-color: #d4af37; /* Gold for premium feel */
+  --primary-color: #0b1a30;
+  --secondary-color: #1890ff;
+  --accent-color: #d4af37;
   --bg-dark: #050b14;
   --bg-light: #f0f2f5;
+  --bg-white: #ffffff;
   --text-main: #333333;
   --text-light: #ffffff;
 }
@@ -26,12 +27,13 @@ body {
   box-sizing: border-box;
 }
 
+/* Glass card for light theme */
 .glass-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
 }
 
 .section-padding {
@@ -48,4 +50,8 @@ body {
   background: linear-gradient(90deg, #0b1a30 0%, #1890ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.logo-white {
+  filter: brightness(0) invert(1);
 }
