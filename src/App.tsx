@@ -10,7 +10,9 @@ import {
   HomeOutlined,
   DatabaseOutlined,
   ArrowRightOutlined,
-  ArrowLeftOutlined
+  ArrowLeftOutlined,
+  SafetyCertificateOutlined,
+  ShareAltOutlined
 } from '@ant-design/icons';
 import { motion } from 'framer-motion';
 import './index.css';
@@ -349,10 +351,48 @@ const App: React.FC = () => {
                   </Col>
                 </Row>
 
-                {/* Placeholder for Brain Module 2 */}
-                <div style={{ marginTop: '100px', borderTop: '1px dashed #ccc', paddingTop: '60px', opacity: 0.5 }}>
-                  <Title level={3} style={{ textAlign: 'center', color: '#999' }}>[ 具脑硬件 · 模块 2 待定区 ]</Title>
-                  <Paragraph style={{ textAlign: 'center', color: '#999' }}>这里将作为具脑硬件体系化论述的第二个模块</Paragraph>
+                {/* Brain Module 2: 可信任大脑 */}
+                <div style={{ marginTop: '100px', borderTop: '1px solid #e8e8e8', paddingTop: '80px' }}>
+                  <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                    <Title level={2} style={{ color: '#333', fontSize: '2rem' }}>模块 2：给硬件一个“可信任”的大脑</Title>
+                    <Paragraph style={{ color: '#666', fontSize: '1.2rem', marginTop: 10 }}>在高容错、高责任的教育科技人才领域，判断AI是否可用的唯一标准是“可信任”</Paragraph>
+                  </div>
+                  
+                  <Row gutter={[32, 32]} align="stretch">
+                    <Col xs={24} md={8}>
+                      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} style={{ height: '100%' }}>
+                        <Card bordered={false} style={{ background: '#f0f5ff', border: '1px solid #adc6ff', borderRadius: '16px', height: '100%' }}>
+                          <DatabaseOutlined style={{ fontSize: '32px', color: '#1890ff', marginBottom: '16px' }} />
+                          <Title level={4} style={{ color: '#0b1a30' }}>“可信任”基础设施</Title>
+                          <Paragraph style={{ color: '#555', lineHeight: 1.8 }}>
+                            依托平方创想建成的全球最大教育科技人才垂直领域知识中心，形成<Text strong style={{ color: '#1890ff' }}>真实可用知识 (True Knowledge)</Text> 与 <Text strong style={{ color: '#1890ff' }}>真实可信数据 (True Data)</Text>。为底层模型提供绝对可信的训练底座。
+                          </Paragraph>
+                        </Card>
+                      </motion.div>
+                    </Col>
+                    <Col xs={24} md={8}>
+                      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.1 }} style={{ height: '100%' }}>
+                        <Card bordered={false} style={{ background: '#fffcf5', border: '1px solid #faad14', borderRadius: '16px', height: '100%' }}>
+                          <SafetyCertificateOutlined style={{ fontSize: '32px', color: '#d4af37', marginBottom: '16px' }} />
+                          <Title level={4} style={{ color: '#0b1a30' }}>“数据+知识”双驱动</Title>
+                          <Paragraph style={{ color: '#555', lineHeight: 1.8 }}>
+                            打破一刀切的通用模型方案。通用大模型提供基础感知，而垂直大模型将<Text strong style={{ color: '#d4af37' }}>专家规则、因果逻辑与经验固化为知识模块</Text>，保证在极低容错率场景下的高精度与可追溯性。
+                          </Paragraph>
+                        </Card>
+                      </motion.div>
+                    </Col>
+                    <Col xs={24} md={8}>
+                      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }} style={{ height: '100%' }}>
+                        <Card bordered={false} style={{ background: '#fff0f6', border: '1px solid #ffadd2', borderRadius: '16px', height: '100%' }}>
+                          <ShareAltOutlined style={{ fontSize: '32px', color: '#eb2f96', marginBottom: '16px' }} />
+                          <Title level={4} style={{ color: '#0b1a30' }}>“知己知彼”场景赋能</Title>
+                          <Paragraph style={{ color: '#555', lineHeight: 1.8 }}>
+                            基于可信任基座，实现全场景赋能。向内帮助组织<Text strong style={{ color: '#eb2f96' }}>“知己”</Text>（风险防御、底线保证）；向外帮助组织<Text strong style={{ color: '#eb2f96' }}>“知彼”</Text>（评估规划、科研产学研、价值挖掘），支撑高利害行业的智能决策。
+                          </Paragraph>
+                        </Card>
+                      </motion.div>
+                    </Col>
+                  </Row>
                 </div>
               </div>
             </motion.section>
