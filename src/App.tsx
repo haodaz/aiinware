@@ -113,14 +113,14 @@ const App: React.FC = () => {
               <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
                 <Space direction="vertical" size="large">
                   <Tag color="blue" style={{ padding: '4px 12px', fontSize: '14px', borderRadius: '16px' }}>
-                    战略合作愿景发布
+                    战略合作愿景
                   </Tag>
                   <Title style={{ fontSize: '4.5rem', margin: 0, fontWeight: 800, lineHeight: 1.2 }}>
                     <span style={{ color: '#fff' }}>智算筑基，</span>
                     <span className="title-gradient">行业生慧</span>
                   </Title>
                   <Title level={2} style={{ color: '#888', fontWeight: 300, marginTop: 10 }}>
-                    超越传统计算，打造 <Text style={{ color: '#d4af37', fontWeight: 600, fontSize: '2.5rem', margin: '0 8px' }}>具脑与具心</Text> 的新一代数字基础设施
+                    基于“教育-科技-人才”行业基础设施与能力，打造 <Text style={{ color: '#d4af37', fontWeight: 600, fontSize: '2.5rem', margin: '0 8px' }}>具脑硬件与具心算力</Text>
                   </Title>
                   <Paragraph style={{ fontSize: '1.2rem', color: '#bbb', maxWidth: '900px', margin: '32px auto 0 auto', lineHeight: 1.8 }}>
                     共同践行“科技求真、以人为本”理念。依托平方创想在教育、科技、人才领域的垂直数字基础设施与深厚行业 Know-how，深度赋能新华三算力底座，让硬件焕发业务生机。以真实的垂直切入价值，带动底层基础设施与服务的大规模部署，携手进入千行百业与千家万户。
@@ -145,11 +145,11 @@ const App: React.FC = () => {
                   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                     <Card className="glass-card" bordered={false} style={{ height: '100%', background: '#f8faff', boxShadow: '0 10px 30px rgba(24,144,255,0.08)' }}>
                       <div style={{ fontSize: '48px', color: '#1890ff', marginBottom: '20px' }}><BulbOutlined /></div>
-                      <Title level={3} style={{ color: '#0b1a30' }}>具脑硬件 (Hardware with a Brain)</Title>
+                      <Title level={3} style={{ color: '#0b1a30' }}>具脑硬件</Title>
                       <Paragraph style={{ color: '#555', fontSize: '16px', lineHeight: 1.8 }}>
-                        代表人工智能的<Text strong style={{ color: '#1890ff' }}>智慧、专业度、决策与数据</Text>。
+                        让硬件搭载的AI更好、更垂直，更适合目前高风险、高利害的教育政务行业。
                         <br/><br/>
-                        基于平方创想10年积累的行业垂直数据底座与专业大模型。让新华三的算力不再是通用的计算器，而是深谙行业规则、能够主动作出专业诊断的“行业专家大脑”。
+                        深谙行业规则、聚焦行业“人”的要素，能够主动作出专业诊断、助力决策的“行业专家大脑”。
                       </Paragraph>
                     </Card>
                   </motion.div>
@@ -158,11 +158,11 @@ const App: React.FC = () => {
                   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                     <Card className="glass-card" bordered={false} style={{ height: '100%', background: '#fffcf5', boxShadow: '0 10px 30px rgba(212,175,55,0.08)' }}>
                       <div style={{ fontSize: '48px', color: '#d4af37', marginBottom: '20px' }}><HeartOutlined /></div>
-                      <Title level={3} style={{ color: '#0b1a30' }}>具心硬件 (Hardware with a Heart)</Title>
+                      <Title level={3} style={{ color: '#0b1a30' }}>具心算力</Title>
                       <Paragraph style={{ color: '#555', fontSize: '16px', lineHeight: 1.8 }}>
-                        代表人工智能的<Text strong style={{ color: '#d4af37' }}>记忆、交流、共情与反馈</Text>。
+                        算力不应只是用来跑数据的计算器，而是有理解、有方向、有效率的生命体。
                         <br/><br/>
-                        基于平方创想独有的“认知图谱（Learning Graph）”与长周期伴随记忆。让新华三的终端不再是“每次重置”的机器，而是能懂人、记忆人、陪伴人成长的“知心伙伴”。
+                        代表着人工智能在垂直场景下的记忆、交流、共情与正向反馈机制。
                       </Paragraph>
                     </Card>
                   </motion.div>
@@ -176,12 +176,12 @@ const App: React.FC = () => {
             <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                 <HeartOutlined style={{ fontSize: '48px', color: '#ff4d4f', marginBottom: '24px' }} />
-                <Title level={2} style={{ color: '#0b1a30', margin: 0 }}>具脑 + 具心 = 真正的以人为本</Title>
+                <Title level={2} style={{ color: '#0b1a30', margin: 0 }}>让硬件与算力，与“人”产生更多可能</Title>
                 <Paragraph style={{ color: '#555', fontSize: '18px', lineHeight: 1.8, marginTop: '30px', textAlign: 'justify', textIndent: '2em' }}>
-                  在追逐冰冷算力和机械躯体的时代，我们坚信：<Text strong style={{ color: '#1890ff', fontSize: '18px' }}>关注“人”、服务“人”、打动“人”</Text>，才是科技硬件的终极归宿。
+                  基于平方创想独有的<Text strong style={{ color: '#1890ff' }}>“认知图谱（Learning Graph）”</Text>与长周期伴随记忆，硬件终端将不再是每次开机都要“重置”的冰冷工具，而是能懂人、记忆人、陪伴人成长的“知心伙伴”。
                 </Paragraph>
                 <Paragraph style={{ color: '#555', fontSize: '18px', lineHeight: 1.8, textAlign: 'justify', textIndent: '2em' }}>
-                  只有当硬件具备了垂直深度的专业“大脑”（精准诊断、智慧决策），同时又拥有了能够长期记忆、持续共情的“心脏”（伴随成长、懂你所需），那些堆砌在机房里的算力与数据，才能真正转化为改变千行百业、温润千家万户的数字生命力。这不仅是硬件形态的升级，更是重塑硬件与人互动关系的哲学跨越。
+                  这种智能的注入，将创造更高频次的人机交互。借着与硬件中智能的深度 Bonding，用户将获得与硬件本身的品牌 Bonding。他们建立起的不仅是对机器专业性的认可，对底层安全数据的信任，更是对新华三数字基础设施难以割舍的使用粘性。
                 </Paragraph>
               </motion.div>
             </div>
