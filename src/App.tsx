@@ -383,9 +383,9 @@ const App: React.FC = () => {
                         <Title level={4} style={{ color: '#1890ff' }}>平方创想加持下的新华三算力</Title>
                         <Title level={2} style={{ color: '#0b1a30', fontSize: '28px', margin: '20px 0' }}>算力是“资产投资”</Title>
                         <Paragraph style={{ color: '#444', lineHeight: 2, fontSize: '16px', flexGrow: 1, marginTop: '10px' }}>
-                          依托平方创想独特的<Text strong style={{ color: '#1890ff' }}>数据飞轮架构</Text>，算力每一次被业务终端的真实需求所驱动，所产生的高价值数据都将被系统“零额外成本”地捕获、去重、合并与沉淀。
+                          依托平方创想独特的<Text strong style={{ color: '#1890ff' }}>数据飞轮架构</Text>，我们深谙如何构建高效的<Text strong style={{ color: '#0b1a30' }}>“算力循环”</Text>。算力“出去”时，能够基于深刻的行业理解，精准高效地调度资源支持系统；算力“回来”时，所采集的高价值数据将被“零额外成本”地捕获、去重、合并与沉淀。
                           <br/><br/>
-                          同一个目标被查询越多次，这台设备内的知识库就越丰满。每一分钱的算力支出，都在转化为高纯度的数字资产，让系统<Text strong style={{ color: '#1890ff' }}>越用越快、越用越准、越用越聪明</Text>。
+                          通过这种绝妙的循环机制，让被循环的数据产生复利价值。同一个目标被查询越多次，设备内的知识库就越丰满。每一分钱的算力支出，都在转化为高纯度的数字资产，让系统<Text strong style={{ color: '#1890ff' }}>越用越快、越用越准、越用越聪明</Text>。
                         </Paragraph>
                       </Card>
                     </motion.div>
