@@ -7,7 +7,10 @@ import {
   AppstoreOutlined,
   BankOutlined,
   TeamOutlined,
-  HomeOutlined
+  HomeOutlined,
+  DatabaseOutlined,
+  ArrowRightOutlined,
+  ArrowLeftOutlined
 } from '@ant-design/icons';
 import { motion } from 'framer-motion';
 import './index.css';
@@ -387,6 +390,49 @@ const App: React.FC = () => {
                           <br/><br/>
                           通过这种绝妙的循环机制，让被循环的数据产生复利价值。同一个目标被查询越多次，设备内的知识库就越丰满。每一分钱的算力支出，都在转化为高纯度的数字资产，让系统<Text strong style={{ color: '#1890ff' }}>越用越快、越用越准、越用越聪明</Text>。
                         </Paragraph>
+
+                        {/* Animated Circulation Chart */}
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '30px', padding: '24px 20px', background: 'rgba(255,255,255,0.7)', borderRadius: '12px', border: '1px solid rgba(24, 144, 255, 0.2)' }}>
+                          <div style={{ textAlign: 'center', padding: '15px 10px', background: '#fff', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', width: '130px', zIndex: 2, border: '1px solid #e8e8e8' }}>
+                            <DatabaseOutlined style={{ fontSize: '28px', color: '#1890ff', marginBottom: '8px' }} />
+                            <div style={{ fontSize: '14px', fontWeight: 'bold', color: '#0b1a30' }}>平方数据中枢</div>
+                          </div>
+                          
+                          <div style={{ flexGrow: 1, position: 'relative', height: '110px' }}>
+                            {/* Top Arrow: Compute Out */}
+                            <div style={{ position: 'absolute', top: '10px', left: '0', right: '0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                              <span style={{ fontSize: '13px', color: '#1890ff', fontWeight: 600, marginBottom: '6px' }}>算力出去：精准调度系统</span>
+                              <div style={{ width: '90%', height: '2px', background: '#e6f7ff', position: 'relative' }}>
+                                <motion.div 
+                                  initial={{ x: '-10%', opacity: 0 }}
+                                  animate={{ x: '110%', opacity: [0, 1, 1, 0] }}
+                                  transition={{ repeat: Infinity, duration: 2.5, ease: "linear" }}
+                                  style={{ width: '40%', height: '2px', background: 'linear-gradient(90deg, transparent, #1890ff)', position: 'absolute', left: 0 }}
+                                />
+                              </div>
+                              <ArrowRightOutlined style={{ position: 'absolute', right: '0', color: '#1890ff', top: '24px', fontSize: '16px' }} />
+                            </div>
+                            
+                            {/* Bottom Arrow: Data In */}
+                            <div style={{ position: 'absolute', bottom: '10px', left: '0', right: '0', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                              <ArrowLeftOutlined style={{ position: 'absolute', left: '0', color: '#52c41a', top: '-10px', fontSize: '16px' }} />
+                              <div style={{ width: '90%', height: '2px', background: '#f6ffed', position: 'relative', marginTop: '4px' }}>
+                                <motion.div 
+                                  initial={{ x: '110%', opacity: 0 }}
+                                  animate={{ x: '-10%', opacity: [0, 1, 1, 0] }}
+                                  transition={{ repeat: Infinity, duration: 2.5, ease: "linear", delay: 1.25 }}
+                                  style={{ width: '40%', height: '2px', background: 'linear-gradient(270deg, transparent, #52c41a)', position: 'absolute', left: 0 }}
+                                />
+                              </div>
+                              <span style={{ fontSize: '13px', color: '#52c41a', fontWeight: 600, marginTop: '6px' }}>数据回来：沉淀数字资产</span>
+                            </div>
+                          </div>
+                          
+                          <div style={{ textAlign: 'center', padding: '15px 10px', background: '#fff', borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)', width: '130px', zIndex: 2, border: '1px solid #e8e8e8' }}>
+                            <AppstoreOutlined style={{ fontSize: '28px', color: '#722ed1', marginBottom: '8px' }} />
+                            <div style={{ fontSize: '14px', fontWeight: 'bold', color: '#0b1a30' }}>硬件业务终端</div>
+                          </div>
+                        </div>
                       </Card>
                     </motion.div>
                   </Col>
