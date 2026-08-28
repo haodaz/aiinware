@@ -32,6 +32,7 @@ const staggerContainer = {
 
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState<'brain' | 'heart'>('brain');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -247,96 +248,152 @@ const App: React.FC = () => {
             </div>
           </section>
 
-          {/* NEW SECTION 1: 核心壁垒 —— 行业垂直基础设施与深度 Know-how */}
-          <section className="section-padding bg-light-pattern" style={{ backgroundColor: 'rgba(250, 251, 252, 0.9)', backgroundBlendMode: 'overlay' }}>
-            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                  <Title level={2} style={{ color: '#0b1a30' }}>从“通用基座”到“垂直大脑”的价值飞跃</Title>
-                  <Paragraph style={{ color: '#666', fontSize: '16px' }}>基于平方创想教科人垂直基础设施与深度 Know-how，为硬件注入行业灵魂</Paragraph>
-                </div>
-              </motion.div>
-
-              <Row gutter={[48, 48]} align="middle">
-                <Col xs={24} md={11}>
-                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                    <Card bordered={false} style={{ background: '#fff', border: '1px solid #e8e8e8', boxShadow: '0 4px 12px rgba(0,0,0,0.02)' }}>
-                      <Title level={4} style={{ color: '#888' }}>当前硬件落地的挑战</Title>
-                      <Paragraph style={{ color: '#333', fontSize: '18px', fontWeight: 'bold' }}>
-                        通用 AI 平台 + 客户自建行业知识库
-                      </Paragraph>
-                      <Paragraph style={{ color: '#666', lineHeight: 1.8 }}>
-                        新华三等头部厂商为客户提供了极致的算力底座和通用 AI 使能平台。然而，在教育、政务等高度严谨的领域，客户往往面临“无米之炊”的困境：缺乏高质量的结构化数据，更缺乏将政策导向转化为算法逻辑的团队。
-                        <br/><br/>
-                        <Text type="danger" strong>痛点：算力虽强，但因为缺少行业 Know-how 的支撑，难以真正深入客户的核心业务流。</Text>
-                      </Paragraph>
-                    </Card>
-                  </motion.div>
-                </Col>
-                
-                <Col xs={24} md={2} style={{ textAlign: 'center' }}>
-                  <div style={{ color: '#ccc', fontSize: '24px', fontWeight: 'bold', fontStyle: 'italic' }}>VS</div>
-                </Col>
-
-                <Col xs={24} md={11}>
-                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }}>
-                    <Card bordered={false} style={{ background: '#fffcf5', border: '1px solid #faad14', boxShadow: '0 10px 30px rgba(250, 173, 20, 0.1)' }}>
-                      <Title level={4} style={{ color: '#d4af37' }}>平方创想的“交钥匙”方案</Title>
-                      <Paragraph style={{ color: '#333', fontSize: '18px', fontWeight: 'bold' }}>
-                        垂直基础设施 + 领域 Know-how + 专精模型
-                      </Paragraph>
-                      <Paragraph style={{ color: '#666', lineHeight: 1.8 }}>
-                        我们将平方创想深耕十余年的<Text strong style={{ color: '#d4af37' }}>教育、科技、人才数据图谱</Text>，以及完全成熟的垂直模型应用（如“一答”、“知己”），作为标准“数字大脑”预装进算力一体机中。
-                        <br/><br/>
-                        <Text strong style={{ color: '#d4af37' }}>优势：提供海量的高价值优质行业数据与即插即用的专家模型，让算力设备出厂即具备国家级的行业智力标准。</Text>
-                      </Paragraph>
-                    </Card>
-                  </motion.div>
-                </Col>
-              </Row>
+          {/* SYSTEMATIC VALUE SECTION */}
+          <div style={{ position: 'relative', background: '#fafafa' }}>
+            {/* Sticky Tabs */}
+            <div style={{ 
+              position: 'sticky', 
+              top: 64, // below the main header
+              zIndex: 100, 
+              background: 'rgba(250, 250, 250, 0.85)', 
+              backdropFilter: 'blur(12px)',
+              borderBottom: '1px solid #e8e8e8',
+              display: 'flex',
+              justifyContent: 'center',
+              padding: '20px 0'
+            }}>
+              <div style={{ display: 'flex', gap: '20px' }}>
+                <a 
+                  href="#value-brain"
+                  onClick={(e) => { e.preventDefault(); document.getElementById('value-brain')?.scrollIntoView({ behavior: 'smooth' }) }}
+                  style={{ 
+                    padding: '8px 24px', 
+                    borderRadius: '30px', 
+                    fontWeight: 600, 
+                    fontSize: '16px',
+                    color: activeSection === 'brain' ? '#fff' : '#666',
+                    background: activeSection === 'brain' ? '#0b1a30' : 'transparent',
+                    border: `1px solid ${activeSection === 'brain' ? '#0b1a30' : '#d9d9d9'}`,
+                    transition: 'all 0.3s'
+                  }}
+                >
+                  具脑硬件
+                </a>
+                <a 
+                  href="#value-heart"
+                  onClick={(e) => { e.preventDefault(); document.getElementById('value-heart')?.scrollIntoView({ behavior: 'smooth' }) }}
+                  style={{ 
+                    padding: '8px 24px', 
+                    borderRadius: '30px', 
+                    fontWeight: 600, 
+                    fontSize: '16px',
+                    color: activeSection === 'heart' ? '#fff' : '#666',
+                    background: activeSection === 'heart' ? '#d4af37' : 'transparent',
+                    border: `1px solid ${activeSection === 'heart' ? '#d4af37' : '#d9d9d9'}`,
+                    transition: 'all 0.3s'
+                  }}
+                >
+                  具心算力
+                </a>
+              </div>
             </div>
-          </section>
-          {/* NEW SECTION 1.5: 算力飞轮 */}
-          <section className="section-padding bg-light-pattern" style={{ backgroundColor: '#ffffff', borderTop: '1px solid #f0f0f0' }}>
-            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                  <Title level={2} style={{ color: '#0b1a30' }}>算力的资产化飞轮：从“一次性消耗”到“数字资产沉淀”</Title>
-                  <Paragraph style={{ color: '#555', fontSize: '16px' }}>每一次算力调用，都在为基础模型和行业知识库持续“加厚”</Paragraph>
-                </div>
-              </motion.div>
 
-              <Row gutter={[48, 48]} align="stretch">
-                <Col xs={24} md={12}>
-                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} style={{ height: '100%' }}>
-                    <Card bordered={false} style={{ background: '#f5f7fa', border: 'none', boxShadow: 'none', height: '100%', display: 'flex', flexDirection: 'column' }}>
-                      <Title level={4} style={{ color: '#888' }}>传统通用 AI 模式下的算力</Title>
-                      <Title level={2} style={{ color: '#333', fontSize: '28px', margin: '16px 0' }}>算力是“消耗品”</Title>
-                      <Paragraph style={{ color: '#666', lineHeight: 1.8, fontSize: '16px', flexGrow: 1 }}>
-                        在纯通用大模型场景下，算力被用于处理单次查询。回答结束后，随着对话窗口的关闭，辛苦消耗 Token 检索来的高价值数据就随之<Text strong type="danger">消亡</Text>。
-                        <br/><br/>
-                        下次面临同样的查询，硬件设备只能重新消耗算力从零开始。在这种模式下，Token 与算力仅仅是一次性的消耗品，无法产生复利。
-                      </Paragraph>
-                    </Card>
-                  </motion.div>
-                </Col>
-                
-                <Col xs={24} md={12}>
-                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }} style={{ height: '100%' }}>
-                    <Card bordered={false} style={{ background: 'linear-gradient(135deg, #0b1a30 0%, #1a365d 100%)', border: 'none', boxShadow: '0 20px 40px rgba(11,26,48,0.15)', height: '100%', display: 'flex', flexDirection: 'column' }}>
-                      <Title level={4} style={{ color: '#a0c4ff' }}>平方创想加持下的新华三算力</Title>
-                      <Title level={2} style={{ color: '#fff', fontSize: '28px', margin: '16px 0' }}>算力是“资产投资”</Title>
-                      <Paragraph style={{ color: '#e0e0e0', lineHeight: 1.8, fontSize: '16px', flexGrow: 1 }}>
-                        依托平方创想独特的<Text strong style={{ color: '#d4af37' }}>数据飞轮架构</Text>，算力每一次被业务终端的真实需求所驱动，所产生的高价值数据都将被系统“零额外成本”地捕获、去重、合并与沉淀。
-                        <br/><br/>
-                        同一个目标被查询越多次，这台设备内的知识库就越丰满。每一分钱的算力支出，都在转化为高纯度的数字资产，让系统<Text strong style={{ color: '#fff' }}>越用越快、越用越准、越用越聪明</Text>。
-                      </Paragraph>
-                    </Card>
-                  </motion.div>
-                </Col>
-              </Row>
-            </div>
-          </section>
+            {/* SCREEN 1: 具脑硬件 */}
+            <motion.section 
+              id="value-brain"
+              onViewportEnter={() => setActiveSection('brain')}
+              viewport={{ amount: 0.5 }}
+              style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: '80px 24px', position: 'relative' }}
+            >
+              <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
+                <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+                  <Title level={4} style={{ color: '#0b1a30', fontWeight: 'bold' }}>具脑硬件</Title>
+                  <Title level={2} style={{ color: '#333', fontSize: '2.5rem', marginTop: 10 }}>从“通用基座”到“垂直大脑”的价值飞跃</Title>
+                  <Paragraph style={{ color: '#666', fontSize: '1.2rem', marginTop: 20 }}>为硬件注入行业灵魂，解决通用 AI 无法深入核心业务流的痛点</Paragraph>
+                </div>
+
+                <Row gutter={[64, 64]} align="middle">
+                  <Col xs={24} md={12}>
+                    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                      <Card bordered={false} style={{ background: '#fff', border: '1px solid #e8e8e8', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', borderRadius: '16px', padding: '20px' }}>
+                        <Title level={4} style={{ color: '#888' }}>当前硬件落地的挑战</Title>
+                        <Paragraph style={{ color: '#333', fontSize: '18px', fontWeight: 'bold', marginTop: '20px' }}>
+                          通用 AI 平台 + 客户自建行业知识库
+                        </Paragraph>
+                        <Paragraph style={{ color: '#666', lineHeight: 2, fontSize: '16px', marginTop: '20px' }}>
+                          新华三等头部厂商为客户提供了极致的算力底座和通用 AI 使能平台。然而，在教育、政务等高度严谨的领域，客户往往面临“无米之炊”的困境：缺乏高质量的结构化数据，更缺乏将政策导向转化为算法逻辑的团队。
+                          <br/><br/>
+                          <Text type="danger" strong>痛点：算力虽强，但因为缺少行业 Know-how 的支撑，难以真正深入客户的核心业务流。</Text>
+                        </Paragraph>
+                      </Card>
+                    </motion.div>
+                  </Col>
+                  
+                  <Col xs={24} md={12}>
+                    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }}>
+                      <Card bordered={false} style={{ background: '#fffcf5', border: '1px solid #faad14', boxShadow: '0 20px 50px rgba(250, 173, 20, 0.1)', borderRadius: '16px', padding: '20px' }}>
+                        <Title level={4} style={{ color: '#d4af37' }}>平方创想的“交钥匙”方案</Title>
+                        <Paragraph style={{ color: '#333', fontSize: '18px', fontWeight: 'bold', marginTop: '20px' }}>
+                          垂直基础设施 + 领域 Know-how + 专精模型
+                        </Paragraph>
+                        <Paragraph style={{ color: '#666', lineHeight: 2, fontSize: '16px', marginTop: '20px' }}>
+                          我们将平方创想深耕十余年的<Text strong style={{ color: '#d4af37' }}>教育、科技、人才数据图谱</Text>，以及完全成熟的垂直模型应用，作为标准“数字大脑”预装进算力一体机中。
+                          <br/><br/>
+                          <Text strong style={{ color: '#d4af37' }}>优势：提供海量的高价值优质行业数据与即插即用的专家模型，让算力设备出厂即具备国家级的行业智力标准。</Text>
+                        </Paragraph>
+                      </Card>
+                    </motion.div>
+                  </Col>
+                </Row>
+              </div>
+            </motion.section>
+
+            {/* SCREEN 2: 具心算力 */}
+            <motion.section 
+              id="value-heart"
+              onViewportEnter={() => setActiveSection('heart')}
+              viewport={{ amount: 0.5 }}
+              style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: '80px 24px', background: '#fff', position: 'relative' }}
+            >
+              <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
+                <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+                  <Title level={4} style={{ color: '#d4af37', fontWeight: 'bold' }}>具心算力</Title>
+                  <Title level={2} style={{ color: '#333', fontSize: '2.5rem', marginTop: 10 }}>实现算力的资产化飞轮：从“一次性消耗”到“数字资产沉淀”</Title>
+                  <Paragraph style={{ color: '#666', fontSize: '1.2rem', marginTop: 20 }}>每一次算力调用，都在为知识库持续“加厚”，让系统越用越聪明</Paragraph>
+                </div>
+
+                <Row gutter={[64, 64]} align="stretch">
+                  <Col xs={24} md={12}>
+                    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} style={{ height: '100%' }}>
+                      <Card bordered={false} style={{ background: '#f9f9f9', border: '1px solid #eee', boxShadow: 'none', borderRadius: '16px', padding: '20px', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                        <Title level={4} style={{ color: '#888' }}>传统通用 AI 模式下的算力</Title>
+                        <Title level={2} style={{ color: '#333', fontSize: '28px', margin: '20px 0' }}>算力是“消耗品”</Title>
+                        <Paragraph style={{ color: '#666', lineHeight: 2, fontSize: '16px', flexGrow: 1, marginTop: '10px' }}>
+                          在纯通用大模型场景下，算力被用于处理单次查询。回答结束后，随着对话窗口的关闭，辛苦消耗 Token 检索来的高价值数据就随之<Text strong type="danger">消亡</Text>。
+                          <br/><br/>
+                          下次面临同样的查询，硬件设备只能重新消耗算力从零开始。在这种模式下，Token 与算力仅仅是一次性的消耗品，无法产生复利。
+                        </Paragraph>
+                      </Card>
+                    </motion.div>
+                  </Col>
+                  
+                  <Col xs={24} md={12}>
+                    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }} style={{ height: '100%' }}>
+                      <Card bordered={false} style={{ background: '#f4f8fe', border: '1px solid #adc6ff', boxShadow: '0 20px 50px rgba(24, 144, 255, 0.08)', borderRadius: '16px', padding: '20px', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                        <Title level={4} style={{ color: '#1890ff' }}>平方创想加持下的新华三算力</Title>
+                        <Title level={2} style={{ color: '#0b1a30', fontSize: '28px', margin: '20px 0' }}>算力是“资产投资”</Title>
+                        <Paragraph style={{ color: '#444', lineHeight: 2, fontSize: '16px', flexGrow: 1, marginTop: '10px' }}>
+                          依托平方创想独特的<Text strong style={{ color: '#1890ff' }}>数据飞轮架构</Text>，算力每一次被业务终端的真实需求所驱动，所产生的高价值数据都将被系统“零额外成本”地捕获、去重、合并与沉淀。
+                          <br/><br/>
+                          同一个目标被查询越多次，这台设备内的知识库就越丰满。每一分钱的算力支出，都在转化为高纯度的数字资产，让系统<Text strong style={{ color: '#1890ff' }}>越用越快、越用越准、越用越聪明</Text>。
+                        </Paragraph>
+                      </Card>
+                    </motion.div>
+                  </Col>
+                </Row>
+              </div>
+            </motion.section>
+          </div>
 
 
           {/* NEW SECTION 2: 全矩阵硬件赋能 */}
