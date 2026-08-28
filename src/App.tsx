@@ -345,7 +345,7 @@ const App: React.FC = () => {
                 <div style={{ marginTop: '100px', borderTop: '1px solid #e8e8e8', paddingTop: '80px' }}>
                   <div style={{ textAlign: 'center', marginBottom: '60px' }}>
                     <Title level={2} style={{ color: '#333', fontSize: '2rem' }}>给硬件一个“可信任”的大脑</Title>
-                    <Paragraph style={{ color: '#666', fontSize: '1.2rem', marginTop: 10 }}>在高容错、高责任、小数据的领域，我们需要“可信任”的智慧大脑。</Paragraph>
+                    <Paragraph style={{ color: '#666', fontSize: '1.2rem', marginTop: 10 }}>在低容错、高责任、小数据的领域，我们需要“可信任”的智慧大脑。</Paragraph>
                   </div>
                   
                   <Row gutter={[32, 32]} align="stretch">
