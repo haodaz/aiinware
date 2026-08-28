@@ -1,0 +1,354 @@
+import React, { useEffect, useState } from 'react';
+import { Layout, Typography, Card, Row, Col, Button, Tag, Space, Timeline, ConfigProvider, theme } from 'antd';
+import { 
+  SafetyOutlined, 
+  ClusterOutlined, 
+  BulbOutlined, 
+  HeartOutlined, 
+  CloudServerOutlined,
+  AppstoreOutlined,
+  BankOutlined,
+  TeamOutlined,
+  HomeOutlined
+} from '@ant-design/icons';
+import { motion } from 'framer-motion';
+import './index.css';
+
+const { Header, Content, Footer } = Layout;
+const { Title, Paragraph, Text } = Typography;
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const App: React.FC = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  return (
+    <ConfigProvider
+      theme={{
+        token: {
+          colorPrimary: '#1890ff',
+          fontFamily: 'Inter, sans-serif',
+        },
+        algorithm: theme.darkAlgorithm,
+      }}
+    >
+      <Layout style={{ minHeight: '100vh', background: '#050b14' }}>
+        <Header 
+          style={{ 
+            position: 'fixed', 
+            zIndex: 999, 
+            width: '100%', 
+            display: 'flex', 
+            alignItems: 'center',
+            background: scrolled ? 'rgba(5, 11, 20, 0.9)' : 'transparent',
+            backdropFilter: scrolled ? 'blur(10px)' : 'none',
+            borderBottom: scrolled ? '1px solid rgba(255,255,255,0.1)' : 'none',
+            transition: 'all 0.3s ease',
+            padding: '0 50px'
+          }}
+        >
+          <div style={{ color: '#fff', fontSize: '20px', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <span style={{ color: '#1890ff' }}>平方创想</span> 
+            <span style={{ color: '#888' }}>×</span> 
+            <span style={{ color: '#d4af37' }}>新华三</span>
+          </div>
+        </Header>
+
+        <Content>
+          {/* Hero Section */}
+          <section style={{ 
+            minHeight: '100vh', 
+            display: 'flex', 
+            alignItems: 'center', 
+            justifyContent: 'center',
+            position: 'relative',
+            overflow: 'hidden',
+            paddingTop: '64px'
+          }}>
+            <div style={{
+              position: 'absolute',
+              top: '-20%',
+              left: '-10%',
+              width: '600px',
+              height: '600px',
+              background: 'radial-gradient(circle, rgba(24,144,255,0.15) 0%, rgba(0,0,0,0) 70%)',
+              borderRadius: '50%',
+              filter: 'blur(60px)'
+            }} />
+            <div style={{
+              position: 'absolute',
+              bottom: '-20%',
+              right: '-10%',
+              width: '600px',
+              height: '600px',
+              background: 'radial-gradient(circle, rgba(212,175,55,0.1) 0%, rgba(0,0,0,0) 70%)',
+              borderRadius: '50%',
+              filter: 'blur(60px)'
+            }} />
+
+            <div style={{ textAlign: 'center', zIndex: 1, maxWidth: '1000px', padding: '0 20px' }}>
+              <motion.div initial="hidden" animate="visible" variants={fadeInUp}>
+                <Space direction="vertical" size="large">
+                  <Tag color="blue" style={{ padding: '4px 12px', fontSize: '14px', borderRadius: '16px' }}>
+                    战略合作愿景发布
+                  </Tag>
+                  <Title style={{ fontSize: '4.5rem', margin: 0, fontWeight: 800, lineHeight: 1.2 }}>
+                    <span style={{ color: '#fff' }}>智算筑基，</span>
+                    <span className="title-gradient">行业生慧</span>
+                  </Title>
+                  <Title level={2} style={{ color: '#888', fontWeight: 300, marginTop: 0 }}>
+                    超越传统计算，打造 <Text style={{ color: '#d4af37', fontWeight: 600 }}>具脑与具心</Text> 的新一代数字基础设施
+                  </Title>
+                  <Paragraph style={{ fontSize: '1.2rem', color: '#aaa', maxWidth: '800px', margin: '24px auto' }}>
+                    当“最懂教育科技人才的大脑”遇见“最强健的算力与网络神经系统”。平方创想携手新华三，以人为本，给冷冰冰的钢铁机器注入专业大脑与共情心脏，开创以AI为牵引的算力销售新纪元。
+                  </Paragraph>
+                  <Space size="middle" style={{ marginTop: '20px' }}>
+                    <Button type="primary" size="large" style={{ borderRadius: '8px', padding: '0 32px', height: '48px', fontSize: '16px' }}>
+                      探索战略矩阵
+                    </Button>
+                    <Button ghost size="large" style={{ borderRadius: '8px', padding: '0 32px', height: '48px', fontSize: '16px' }}>
+                      观看合作愿景
+                    </Button>
+                  </Space>
+                </Space>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* Vision Section: Brain and Heart */}
+          <section className="section-padding" style={{ background: '#0a1220' }}>
+            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
+                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                  <Title level={2}><span className="title-gradient">具脑与具心</span>：打破同质化的全新战略</Title>
+                  <Paragraph style={{ color: '#888', fontSize: '16px' }}>不再是单纯堆砌算力，而是赋予硬件灵魂，从“泛价值”走向“核心切入价值”</Paragraph>
+                </div>
+              </motion.div>
+
+              <Row gutter={[48, 48]} justify="center">
+                <Col xs={24} md={12}>
+                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                    <Card className="glass-card" bordered={false} style={{ height: '100%', background: 'rgba(24,144,255,0.05)' }}>
+                      <div style={{ fontSize: '48px', color: '#1890ff', marginBottom: '20px' }}><BulbOutlined /></div>
+                      <Title level={3} style={{ color: '#fff' }}>具脑硬件 (Hardware with a Brain)</Title>
+                      <Paragraph style={{ color: '#aaa', fontSize: '16px', lineHeight: 1.8 }}>
+                        代表人工智能的<Text strong style={{ color: '#fff' }}>智慧、专业度、决策与数据</Text>。
+                        <br/><br/>
+                        基于平方创想10年积累的行业垂直数据底座与专业大模型。让新华三的算力不再是通用的计算器，而是深谙行业规则、能够主动作出专业诊断的“行业专家大脑”。
+                      </Paragraph>
+                    </Card>
+                  </motion.div>
+                </Col>
+                <Col xs={24} md={12}>
+                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                    <Card className="glass-card" bordered={false} style={{ height: '100%', background: 'rgba(212,175,55,0.05)' }}>
+                      <div style={{ fontSize: '48px', color: '#d4af37', marginBottom: '20px' }}><HeartOutlined /></div>
+                      <Title level={3} style={{ color: '#fff' }}>具心硬件 (Hardware with a Heart)</Title>
+                      <Paragraph style={{ color: '#aaa', fontSize: '16px', lineHeight: 1.8 }}>
+                        代表人工智能的<Text strong style={{ color: '#fff' }}>记忆、交流、共情与反馈</Text>。
+                        <br/><br/>
+                        基于平方创想独有的“认知图谱（Learning Graph）”与长周期伴随记忆。让新华三的终端不再是“每次重置”的机器，而是能懂人、记忆人、陪伴人成长的“知心伙伴”。
+                      </Paragraph>
+                    </Card>
+                  </motion.div>
+                </Col>
+              </Row>
+            </div>
+          </section>
+
+          {/* Value Prop Table */}
+          <section className="section-padding" style={{ background: '#050b14' }}>
+            <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 24px' }}>
+               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                  <Title level={2}>价值重塑：过去 VS 联合未来</Title>
+                </div>
+                
+                <div style={{ background: 'rgba(255,255,255,0.02)', borderRadius: '16px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)' }}>
+                  <Row style={{ background: 'rgba(255,255,255,0.05)', padding: '20px', fontWeight: 'bold' }}>
+                    <Col span={6} style={{ color: '#888' }}>核心维度</Col>
+                    <Col span={9} style={{ color: '#aaa' }}>过去的传统硬件 (单打独斗)</Col>
+                    <Col span={9} style={{ color: '#d4af37' }}>现在的联合方案 (新华三+平方)</Col>
+                  </Row>
+                  {[
+                    ['产品属性', '泛用型IT基础设施，冷冰冰的工具', '以人为本的“具脑与具心”数字伴侣'],
+                    ['客户价值', '提供基础算力与存储 (易被替代)', '直击业务痛点的决策能力 (极高粘性)'],
+                    ['交互模式', '被动响应指令 (无记忆，形同初见)', '主动感知、长期记录 (越用越懂你)'],
+                    ['销售话术', '“我们的服务器算力更强、更稳定”', '“这是为贵单位定制的教科人专属大脑”']
+                  ].map((item, index) => (
+                    <Row key={index} style={{ padding: '24px 20px', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+                      <Col span={6} style={{ color: '#1890ff', fontWeight: 500 }}>{item[0]}</Col>
+                      <Col span={9} style={{ color: '#888' }}>{item[1]}</Col>
+                      <Col span={9} style={{ color: '#fff', fontWeight: 500 }}>{item[2]}</Col>
+                    </Row>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* Sales Engine */}
+          <section className="section-padding" style={{ background: '#0a1220' }}>
+            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
+               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                  <Title level={2}>商业变现矩阵：以软带硬的大单引擎</Title>
+                  <Paragraph style={{ color: '#888', fontSize: '16px' }}>以AI概念与业务价值切入，带动大规模硬件基础设施采购</Paragraph>
+                </div>
+              </motion.div>
+
+              <Row gutter={[32, 32]}>
+                <Col xs={24} lg={8}>
+                   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                    <Card className="glass-card" bordered={false} style={{ height: '100%' }}>
+                      <CloudServerOutlined style={{ fontSize: '40px', color: '#1890ff', marginBottom: '24px' }} />
+                      <Title level={4}>大型项目：算力与数据私有云</Title>
+                      <Tag color="volcano" style={{ marginBottom: '16px' }}>高客单价 / 标杆客户</Tag>
+                      <Paragraph style={{ color: '#aaa' }}>
+                        <Text strong style={{ color: '#fff' }}>针对：</Text> 省市教育局、双一流高校、大型科研院所。<br/><br/>
+                        <Text strong style={{ color: '#fff' }}>方案：</Text> 平方提供全套垂直大模型及区域数据平台。带动新华三<Text style={{color:'#1890ff'}}>大型GPU集群、高性能存储</Text>的大规模部署。<br/><br/>
+                        <Text strong style={{ color: '#fff' }}>卖点：</Text> 最高级别的安全合规，一单拉动极高硬件销售额。
+                      </Paragraph>
+                    </Card>
+                   </motion.div>
+                </Col>
+                <Col xs={24} lg={8}>
+                   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }}>
+                    <Card className="glass-card" bordered={false} style={{ height: '100%' }}>
+                      <AppstoreOutlined style={{ fontSize: '40px', color: '#1890ff', marginBottom: '24px' }} />
+                      <Title level={4}>中小项目：场景化AI一体机</Title>
+                      <Tag color="green" style={{ marginBottom: '16px' }}>开箱即用 / 快速走量</Tag>
+                      <Paragraph style={{ color: '#aaa' }}>
+                        <Text strong style={{ color: '#fff' }}>针对：</Text> 普通本专科院校、单一院系、中小型政企。<br/><br/>
+                        <Text strong style={{ color: '#fff' }}>方案：</Text> 预装“一答”治理模型、“知己”升学模型的<Text style={{color:'#1890ff'}}>新华三灵犀系列大模型一体机</Text>。<br/><br/>
+                        <Text strong style={{ color: '#fff' }}>卖点：</Text> 软硬出厂预装，插电即用。对下沉市场极具杀伤力，以轻量化硬件打包走量。
+                      </Paragraph>
+                    </Card>
+                   </motion.div>
+                </Col>
+                <Col xs={24} lg={8}>
+                   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.4 }}>
+                    <Card className="glass-card" bordered={false} style={{ height: '100%' }}>
+                      <ClusterOutlined style={{ fontSize: '40px', color: '#1890ff', marginBottom: '24px' }} />
+                      <Title level={4}>衍生拉动：全栈网络升级效应</Title>
+                      <Tag color="purple" style={{ marginBottom: '16px' }}>生态协同 / 连带销售</Tag>
+                      <Paragraph style={{ color: '#aaa' }}>
+                        <Text strong style={{ color: '#fff' }}>针对：</Text> 具有校园网改造、办公数字化的潜在客户。<br/><br/>
+                        <Text strong style={{ color: '#fff' }}>方案：</Text> 借由“AI升级”契机，将新华三的<Text style={{color:'#1890ff'}}>Wi-Fi 7、核心交换机、安全网关</Text>顺势打包。<br/><br/>
+                        <Text strong style={{ color: '#fff' }}>卖点：</Text> 以AI大脑为钩子，实现从单点算力到全栈网络基础设施的全面替换。
+                      </Paragraph>
+                    </Card>
+                   </motion.div>
+                </Col>
+              </Row>
+            </div>
+          </section>
+
+          {/* Use Cases */}
+          <section className="section-padding" style={{ background: '#050b14' }}>
+            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
+               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                  <Title level={2}>四大标杆落地场景</Title>
+                  <Paragraph style={{ color: '#888', fontSize: '16px' }}>将“具脑与具心”理念落地到真实购买力强的应用领域</Paragraph>
+                </div>
+              </motion.div>
+
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={staggerContainer}>
+                <Timeline
+                  mode="alternate"
+                  items={[
+                    {
+                      color: '#1890ff',
+                      dot: <BankOutlined style={{ fontSize: '24px', background: '#050b14', padding: '4px' }} />,
+                      children: (
+                        <Card className="glass-card" bordered={false} style={{ textAlign: 'left', marginBottom: '20px' }}>
+                          <Title level={4} style={{ color: '#1890ff', marginTop: 0 }}>政务场景：区域科技人才数字大脑</Title>
+                          <Paragraph style={{ color: '#aaa' }}>
+                            <Text strong style={{ color: '#fff' }}>硬件底座：</Text> 新华三政务私有云与算力节点<br/>
+                            <Text strong style={{ color: '#fff' }}>软件大脑：</Text> 平方创想人才知识图谱与宏观决策模型<br/>
+                            <Text strong style={{ color: '#fff' }}>价值展现：</Text> 帮助区域人才局精准盘点辖区人才，进行产业政策和招商引资的“具脑”智能决策。
+                          </Paragraph>
+                        </Card>
+                      ),
+                    },
+                    {
+                      color: '#d4af37',
+                      dot: <TeamOutlined style={{ fontSize: '24px', background: '#050b14', padding: '4px', color: '#d4af37' }} />,
+                      children: (
+                        <Card className="glass-card" bordered={false} style={{ textAlign: 'left', marginBottom: '20px' }}>
+                          <Title level={4} style={{ color: '#d4af37', marginTop: 0 }}>大型企业：企业级数字内生导师</Title>
+                          <Paragraph style={{ color: '#aaa' }}>
+                            <Text strong style={{ color: '#fff' }}>硬件底座：</Text> 新华三灵犀智算一体机<br/>
+                            <Text strong style={{ color: '#fff' }}>软件大脑：</Text> 平方职业发展模型与技能图谱<br/>
+                            <Text strong style={{ color: '#fff' }}>价值展现：</Text> 为央国企/500强员工提供带有长线记忆（具心）的职业技能培训和晋升规划，提升组织人才密度。
+                          </Paragraph>
+                        </Card>
+                      ),
+                    },
+                    {
+                      color: '#1890ff',
+                      dot: <SafetyOutlined style={{ fontSize: '24px', background: '#050b14', padding: '4px' }} />,
+                      children: (
+                        <Card className="glass-card" bordered={false} style={{ textAlign: 'left', marginBottom: '20px' }}>
+                          <Title level={4} style={{ color: '#1890ff', marginTop: 0 }}>院校场景：校级一网通办与数字辅导员</Title>
+                          <Paragraph style={{ color: '#aaa' }}>
+                            <Text strong style={{ color: '#fff' }}>硬件底座：</Text> 新华三智慧校园网络与边缘服务器<br/>
+                            <Text strong style={{ color: '#fff' }}>软件大脑：</Text> 平方创想“一答”智能体<br/>
+                            <Text strong style={{ color: '#fff' }}>价值展现：</Text> 部署在校园各处的终端，真正成为懂学生选课、心理、就业的“具心”校园辅导员，而非冰冷的查询机。
+                          </Paragraph>
+                        </Card>
+                      ),
+                    },
+                    {
+                      color: '#d4af37',
+                      dot: <HomeOutlined style={{ fontSize: '24px', background: '#050b14', padding: '4px', color: '#d4af37' }} />,
+                      children: (
+                        <Card className="glass-card" bordered={false} style={{ textAlign: 'left' }}>
+                          <Title level={4} style={{ color: '#d4af37', marginTop: 0 }}>个人家庭：知己家庭AI专属终端</Title>
+                          <Paragraph style={{ color: '#aaa' }}>
+                            <Text strong style={{ color: '#fff' }}>硬件底座：</Text> 新华三家用智能路由器/智能带屏终端<br/>
+                            <Text strong style={{ color: '#fff' }}>软件大脑：</Text> 平方创想“知己”升学陪伴模型<br/>
+                            <Text strong style={{ color: '#fff' }}>价值展现：</Text> 成为伴随孩子从小升初到高考规划的专属教育管家，以极其亲民的方式让高端算力进入千家万户。
+                          </Paragraph>
+                        </Card>
+                      ),
+                    }
+                  ]}
+                />
+              </motion.div>
+            </div>
+          </section>
+        </Content>
+
+        <Footer style={{ textAlign: 'center', background: '#000', color: '#666', padding: '40px 20px' }}>
+          <Title level={4} style={{ color: '#888', marginBottom: '24px' }}>平方创想 × 新华三</Title>
+          <Text style={{ color: '#555' }}>打造以人为本的新一代基础设施 | 商业合作内部演示版 v1.0</Text>
+        </Footer>
+      </Layout>
+    </ConfigProvider>
+  );
+};
+
+export default App;
