@@ -728,112 +728,142 @@ const App: React.FC = () => {
                 transition={{ duration: 0.4 }}
               >
                 {activeScenarioTab === 'tog' && (
-                  <Row gutter={[32, 32]}>
-                    <Col xs={24} md={12}>
-                      <Card className="glass-card" bordered={false} style={{ height: '100%', background: '#fff', border: '1px solid #e6f7ff', boxShadow: '0 8px 24px rgba(24,144,255,0.08)' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
-                          <BankOutlined style={{ fontSize: '28px', color: '#1890ff', marginRight: '16px' }} />
-                          <Title level={4} style={{ color: '#0b1a30', margin: 0 }}>区域人才大脑</Title>
-                        </div>
-                        <Paragraph style={{ color: '#555', lineHeight: 1.8 }}>
-                          帮助区域人才局精准盘点辖区人才，进行产业政策和招商引资的“具脑”智能决策。<br/><br/>
-                          <Text strong style={{ color: '#1890ff' }}>核心价值：人才检验与数据真实性</Text><br/>
-                          政务决策容错率极低，仅仅拥有生成式的“幻觉”大模型是不可用的。基于平方底座真实可信的数据进行人才盘点和产业分析，确保每一条履历都能被精准检验，是算力转化为政绩的核心。
-                        </Paragraph>
-                      </Card>
-                    </Col>
-                    <Col xs={24} md={12}>
-                      <Card className="glass-card" bordered={false} style={{ height: '100%', background: '#fff', border: '1px solid #e6f7ff', boxShadow: '0 8px 24px rgba(24,144,255,0.08)' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
-                          <ShareAltOutlined style={{ fontSize: '28px', color: '#1890ff', marginRight: '16px' }} />
-                          <Title level={4} style={{ color: '#0b1a30', margin: 0 }}>产学研转化平台</Title>
-                        </div>
-                        <Paragraph style={{ color: '#555', lineHeight: 1.8 }}>
-                          打破高校科研成果与地方产业升级之间的信息壁垒，实现“精准对接”。<br/><br/>
-                          <Text strong style={{ color: '#1890ff' }}>赋能地方经济</Text><br/>
-                          借助具脑模型，自动挖掘区域内的高校专利、科研专家团队，匹配地方企业的真实技术需求，实现知识链与产业链的智能融合，推动地方实体经济的高质量发展。
-                        </Paragraph>
-                      </Card>
-                    </Col>
-                  </Row>
+                  <div style={{ background: '#fff', borderRadius: '24px', overflow: 'hidden', border: '1px solid #e6f7ff', boxShadow: '0 20px 60px rgba(0,0,0,0.05)' }}>
+                    <div style={{ height: '360px', width: '100%', position: 'relative' }}>
+                      <img src="/images/scenarios/tog.png" alt="Government Data Brain" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, transparent 100%)' }} />
+                      <div style={{ position: 'absolute', bottom: '40px', left: '50px' }}>
+                        <Title level={2} style={{ color: '#fff', margin: 0, letterSpacing: '1px' }}>政府 ToG：构建区域科技人才数字大脑</Title>
+                        <Paragraph style={{ color: 'rgba(255,255,255,0.85)', fontSize: '16px', margin: '12px 0 0 0' }}>全局视野下的高容错率政务决策支撑，洞察全球科技人才流向</Paragraph>
+                      </div>
+                    </div>
+                    <div style={{ padding: '40px 50px' }}>
+                      <Row gutter={[40, 40]}>
+                        <Col xs={24} md={12}>
+                          <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+                            <BankOutlined style={{ fontSize: '28px', color: '#1890ff', marginRight: '16px' }} />
+                            <Title level={4} style={{ color: '#0b1a30', margin: 0 }}>区域人才大脑</Title>
+                          </div>
+                          <Paragraph style={{ color: '#555', lineHeight: 1.8 }}>
+                            帮助区域人才局精准盘点辖区人才，进行产业政策和招商引资的“具脑”智能决策。<br/><br/>
+                            <Text strong style={{ color: '#1890ff' }}>核心价值：人才检验与数据真实性</Text><br/>
+                            政务决策容错率极低，仅仅拥有生成式的“幻觉”大模型是不可用的。基于平方底座真实可信的数据进行人才盘点和产业分析，确保每一条履历都能被精准检验，是算力转化为政绩的核心。
+                          </Paragraph>
+                        </Col>
+                        <Col xs={24} md={12}>
+                          <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+                            <ShareAltOutlined style={{ fontSize: '28px', color: '#1890ff', marginRight: '16px' }} />
+                            <Title level={4} style={{ color: '#0b1a30', margin: 0 }}>产学研转化平台</Title>
+                          </div>
+                          <Paragraph style={{ color: '#555', lineHeight: 1.8 }}>
+                            打破高校科研成果与地方产业升级之间的信息壁垒，实现“精准对接”。<br/><br/>
+                            <Text strong style={{ color: '#1890ff' }}>赋能地方经济</Text><br/>
+                            借助具脑模型，自动挖掘区域内的高校专利、科研专家团队，匹配地方企业的真实技术需求，实现知识链与产业链的智能融合，推动地方实体经济的高质量发展。
+                          </Paragraph>
+                        </Col>
+                      </Row>
+                    </div>
+                  </div>
                 )}
 
                 {activeScenarioTab === 'tos' && (
-                  <Row gutter={[32, 32]}>
-                    <Col xs={24} md={12}>
-                      <Card className="glass-card" bordered={false} style={{ height: '100%', background: '#fff', border: '1px solid #d9f7be', boxShadow: '0 8px 24px rgba(82,196,26,0.08)' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
-                          <TeamOutlined style={{ fontSize: '28px', color: '#52c41a', marginRight: '16px' }} />
-                          <Title level={4} style={{ color: '#0b1a30', margin: 0 }}>高中生涯培养一体机</Title>
-                        </div>
-                        <Paragraph style={{ color: '#555', lineHeight: 1.8 }}>
-                          结合新高考改革，为高中学子提供一站式的生涯规划指导。<br/><br/>
-                          <Text strong style={{ color: '#52c41a' }}>知己与数字分身</Text><br/>
-                          利用“知己”模型构建学生的数字分身，结合<Text strong>群体智能</Text>的大数据样本，帮助学生在庞杂的信息中，深度了解自身潜能、透视院校专业，规划最适合的高考志愿与未来职业发展路径。
-                        </Paragraph>
-                      </Card>
-                    </Col>
-                    <Col xs={24} md={12}>
-                      <Card className="glass-card" bordered={false} style={{ height: '100%', background: '#fff', border: '1px solid #d9f7be', boxShadow: '0 8px 24px rgba(82,196,26,0.08)' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
-                          <CloudServerOutlined style={{ fontSize: '28px', color: '#52c41a', marginRight: '16px' }} />
-                          <Title level={4} style={{ color: '#0b1a30', margin: 0 }}>高校智慧建设（私有化部署）</Title>
-                        </div>
-                        <Paragraph style={{ color: '#555', lineHeight: 1.8 }}>
-                          面向高校群体，打造校园专属的私密大模型服务体系。<br/><br/>
-                          <Text strong style={{ color: '#52c41a' }}>职业发展与大型建设</Text><br/>
-                          落地为<Text strong>“高校职业发展一体机”</Text>，帮助大学生解决就业迷茫；同时支持<Text strong>“校园大模型私有化部署”</Text>和校园级大型智算/数据底座建设，确保师生核心数据不出校，实现开箱即用的智慧校务。
-                        </Paragraph>
-                      </Card>
-                    </Col>
-                  </Row>
+                  <div style={{ background: '#fff', borderRadius: '24px', overflow: 'hidden', border: '1px solid #d9f7be', boxShadow: '0 20px 60px rgba(0,0,0,0.05)' }}>
+                    <div style={{ height: '360px', width: '100%', position: 'relative' }}>
+                      <img src="/images/scenarios/tos.png" alt="University Campus" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, transparent 100%)' }} />
+                      <div style={{ position: 'absolute', bottom: '40px', left: '50px' }}>
+                        <Title level={2} style={{ color: '#fff', margin: 0, letterSpacing: '1px' }}>到校 ToS：智慧校园与生涯数字孪生</Title>
+                        <Paragraph style={{ color: 'rgba(255,255,255,0.85)', fontSize: '16px', margin: '12px 0 0 0' }}>从生涯启蒙到就业冲刺，全周期的教育管家</Paragraph>
+                      </div>
+                    </div>
+                    <div style={{ padding: '40px 50px' }}>
+                      <Row gutter={[40, 40]}>
+                        <Col xs={24} md={12}>
+                          <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+                            <TeamOutlined style={{ fontSize: '28px', color: '#52c41a', marginRight: '16px' }} />
+                            <Title level={4} style={{ color: '#0b1a30', margin: 0 }}>高中生涯培养一体机</Title>
+                          </div>
+                          <Paragraph style={{ color: '#555', lineHeight: 1.8 }}>
+                            结合新高考改革，为高中学子提供一站式的生涯规划指导。<br/><br/>
+                            <Text strong style={{ color: '#52c41a' }}>知己与数字分身</Text><br/>
+                            利用“知己”模型构建学生的数字分身，结合<Text strong>群体智能</Text>的大数据样本，帮助学生在庞杂的信息中，深度了解自身潜能、透视院校专业，规划最适合的高考志愿与未来职业发展路径。
+                          </Paragraph>
+                        </Col>
+                        <Col xs={24} md={12}>
+                          <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+                            <CloudServerOutlined style={{ fontSize: '28px', color: '#52c41a', marginRight: '16px' }} />
+                            <Title level={4} style={{ color: '#0b1a30', margin: 0 }}>高校智慧建设（私有化部署）</Title>
+                          </div>
+                          <Paragraph style={{ color: '#555', lineHeight: 1.8 }}>
+                            面向高校群体，打造校园专属的私密大模型服务体系。<br/><br/>
+                            <Text strong style={{ color: '#52c41a' }}>职业发展与大型建设</Text><br/>
+                            落地为<Text strong>“高校职业发展一体机”</Text>，帮助大学生解决就业迷茫；同时支持<Text strong>“校园大模型私有化部署”</Text>和校园级大型智算/数据底座建设，确保师生核心数据不出校，实现开箱即用的智慧校务。
+                          </Paragraph>
+                        </Col>
+                      </Row>
+                    </div>
+                  </div>
                 )}
 
                 {activeScenarioTab === 'tob' && (
-                  <Row gutter={[32, 32]}>
-                    <Col xs={24} md={16}>
-                      <Card className="glass-card" bordered={false} style={{ height: '100%', background: '#fff', border: '1px solid #ffadd2', boxShadow: '0 8px 24px rgba(235,47,150,0.08)' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
-                          <SafetyCertificateOutlined style={{ fontSize: '28px', color: '#eb2f96', marginRight: '16px' }} />
-                          <Title level={4} style={{ color: '#0b1a30', margin: 0 }}>精准人才招聘与盘点 (核心)</Title>
-                        </div>
-                        <Paragraph style={{ color: '#555', lineHeight: 1.8 }}>
-                          利用具脑/具心模型，基于真实的技能图谱与岗位画像，实现企业招聘的精准人岗匹配。<br/><br/>
-                          <Text strong style={{ color: '#eb2f96' }}>降本增效的智能引擎</Text><br/>
-                          对于大型国企与500强企业而言，简历的自动化脱水、应聘者真实能力的智能交叉比对，能极大提升HR部门的筛选效率；更能对内部人才进行定期盘点，提升组织人才密度。
-                        </Paragraph>
-                      </Card>
-                    </Col>
-                    <Col xs={24} md={8}>
-                      <Card className="glass-card" bordered={false} style={{ height: '100%', background: '#fff', border: '1px solid #ffadd2', boxShadow: '0 4px 12px rgba(235,47,150,0.05)' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
-                          <ClusterOutlined style={{ fontSize: '20px', color: '#eb2f96', marginRight: '12px' }} />
-                          <Title level={5} style={{ color: '#0b1a30', margin: 0 }}>企业产研转化</Title>
-                        </div>
-                        <Paragraph style={{ color: '#666', lineHeight: 1.6, fontSize: '13px' }}>
-                          赋能企业创新体系，帮助企业快速连接科研院所的前沿成果，缩短从“纸面专利”到“车间产品”的转化周期，成为企业技术攻坚的外部智库引擎。
-                        </Paragraph>
-                      </Card>
-                    </Col>
-                  </Row>
+                  <div style={{ background: '#fff', borderRadius: '24px', overflow: 'hidden', border: '1px solid #ffadd2', boxShadow: '0 20px 60px rgba(0,0,0,0.05)' }}>
+                    <div style={{ height: '360px', width: '100%', position: 'relative' }}>
+                      <img src="/images/scenarios/tob.png" alt="Corporate Recruitment" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, transparent 100%)' }} />
+                      <div style={{ position: 'absolute', bottom: '40px', left: '50px' }}>
+                        <Title level={2} style={{ color: '#fff', margin: 0, letterSpacing: '1px' }}>到企 ToB：企业级数字内生导师与智库</Title>
+                        <Paragraph style={{ color: 'rgba(255,255,255,0.85)', fontSize: '16px', margin: '12px 0 0 0' }}>降本增效的智能引擎，提升组织核心人才密度</Paragraph>
+                      </div>
+                    </div>
+                    <div style={{ padding: '40px 50px' }}>
+                      <Row gutter={[40, 40]}>
+                        <Col xs={24} md={16}>
+                          <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+                            <SafetyCertificateOutlined style={{ fontSize: '28px', color: '#eb2f96', marginRight: '16px' }} />
+                            <Title level={4} style={{ color: '#0b1a30', margin: 0 }}>精准人才招聘与盘点 (核心)</Title>
+                          </div>
+                          <Paragraph style={{ color: '#555', lineHeight: 1.8 }}>
+                            利用具脑/具心模型，基于真实的技能图谱与岗位画像，实现企业招聘的精准人岗匹配。<br/><br/>
+                            <Text strong style={{ color: '#eb2f96' }}>降本增效的智能引擎</Text><br/>
+                            对于大型国企与500强企业而言，简历的自动化脱水、应聘者真实能力的智能交叉比对，能极大提升HR部门的筛选效率；更能对内部人才进行定期盘点，提升组织人才密度。
+                          </Paragraph>
+                        </Col>
+                        <Col xs={24} md={8}>
+                          <div style={{ display: 'flex', alignItems: 'center', marginBottom: '12px' }}>
+                            <ClusterOutlined style={{ fontSize: '20px', color: '#eb2f96', marginRight: '12px' }} />
+                            <Title level={5} style={{ color: '#0b1a30', margin: 0 }}>企业产研转化</Title>
+                          </div>
+                          <Paragraph style={{ color: '#666', lineHeight: 1.6, fontSize: '13px' }}>
+                            赋能企业创新体系，帮助企业快速连接科研院所的前沿成果，缩短从“纸面专利”到“车间产品”的转化周期，成为企业技术攻坚的外部智库引擎。
+                          </Paragraph>
+                        </Col>
+                      </Row>
+                    </div>
+                  </div>
                 )}
 
                 {activeScenarioTab === 'toc' && (
-                  <Row gutter={[32, 32]}>
-                    <Col xs={24}>
-                      <Card className="glass-card" bordered={false} style={{ height: '100%', background: '#fff', border: '1px solid #ffd666', boxShadow: '0 8px 24px rgba(250,173,20,0.08)' }}>
-                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
-                          <HomeOutlined style={{ fontSize: '32px', color: '#faad14', marginRight: '16px' }} />
-                          <Title level={4} style={{ color: '#0b1a30', margin: 0 }}>大中衔接、长周期伴随与终身学习</Title>
-                        </div>
-                        <Paragraph style={{ color: '#555', lineHeight: 1.8, fontSize: '16px' }}>
-                          <Text strong style={{ color: '#faad14', fontSize: '18px' }}>具心算力的终端体现：有温度的私密智库</Text><br/><br/>
-                          从<Text strong style={{ color: '#d4af37' }}>“大中衔接”</Text>阶段的高考与专业选择开始，平方体系注入家庭的 AI 终端将不再是一个只懂即问即答的消耗品，而是能够提供<Text strong style={{ color: '#d4af37' }}>长周期伴随</Text>的专属教育管家。<br/><br/>
-                          它记住了你的每一次探索、你的优势科目、你的职业倾向，并在未来的大学学习、乃至个人的<Text strong style={{ color: '#d4af37' }}>“终身学习”</Text>道路上，持续为你提供个性化的知识推荐与能力模型构建。以此彰显“具心”算力无可替代的“长线记忆与情绪价值”。
-                        </Paragraph>
-                      </Card>
-                    </Col>
-                  </Row>
+                  <div style={{ background: '#fff', borderRadius: '24px', overflow: 'hidden', border: '1px solid #ffd666', boxShadow: '0 20px 60px rgba(0,0,0,0.05)' }}>
+                    <div style={{ height: '360px', width: '100%', position: 'relative' }}>
+                      <img src="/images/scenarios/toc.png" alt="Family Educational Companion" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, transparent 100%)' }} />
+                      <div style={{ position: 'absolute', bottom: '40px', left: '50px' }}>
+                        <Title level={2} style={{ color: '#fff', margin: 0, letterSpacing: '1px' }}>个人家庭：知己家庭AI专属终端</Title>
+                        <Paragraph style={{ color: 'rgba(255,255,255,0.85)', fontSize: '16px', margin: '12px 0 0 0' }}>长周期陪伴的私密教育管家与情感羁绊</Paragraph>
+                      </div>
+                    </div>
+                    <div style={{ padding: '40px 50px' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+                        <HomeOutlined style={{ fontSize: '32px', color: '#faad14', marginRight: '16px' }} />
+                        <Title level={4} style={{ color: '#0b1a30', margin: 0 }}>大中衔接、长周期伴随与终身学习</Title>
+                      </div>
+                      <Paragraph style={{ color: '#555', lineHeight: 1.8, fontSize: '16px' }}>
+                        <Text strong style={{ color: '#faad14', fontSize: '18px' }}>具心算力的终端体现：有温度的私密智库</Text><br/><br/>
+                        从<Text strong style={{ color: '#d4af37' }}>“大中衔接”</Text>阶段的高考与专业选择开始，平方体系注入家庭的 AI 终端将不再是一个只懂即问即答的消耗品，而是能够提供<Text strong style={{ color: '#d4af37' }}>长周期伴随</Text>的专属教育管家。<br/><br/>
+                        它记住了你的每一次探索、你的优势科目、你的职业倾向，并在未来的大学学习、乃至个人的<Text strong style={{ color: '#d4af37' }}>“终身学习”</Text>道路上，持续为你提供个性化的知识推荐与能力模型构建。以此彰显“具心”算力无可替代的“长线记忆与情绪价值”。
+                      </Paragraph>
+                    </div>
+                  </div>
                 )}
               </motion.div>
             </div>
