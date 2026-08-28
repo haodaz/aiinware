@@ -145,39 +145,41 @@ const App: React.FC = () => {
                 <Paragraph style={{ color: '#555', fontSize: '1.2rem', margin: 0 }}>智能化时代真基建——以人为本，软硬兼济，赋能行业核心价值</Paragraph>
               </div>
               
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'flex-start' }}>
                 
-                {/* Top Left: Brain Text */}
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', paddingRight: '40px' }}>
-                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                {/* Top Left: Brain Text & Line */}
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', paddingRight: '40px', paddingTop: '40px', zIndex: 2 }}>
+                  <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.3 }} viewport={{ once: true }}>
                     <Title level={2} style={{ color: '#333', fontSize: '2.5rem', margin: 0 }}>具脑硬件</Title>
                     <Paragraph style={{ color: '#666', fontSize: '1rem', lineHeight: 1.8, marginTop: '20px' }}>
                       让硬件搭载的AI更好、更垂直，更适合目前高风险、高利害的教育政务行业。
                       <br/>
                       深谙行业规则、聚焦行业“人”的要素，能够主动作出专业诊断、助力决策的“行业专家大脑”。
                     </Paragraph>
-                    <div style={{ width: '1px', height: '100px', background: '#ccc', margin: '20px 0 0 20px' }}></div>
                   </motion.div>
+                  <motion.div initial={{ scaleY: 0 }} whileInView={{ scaleY: 1 }} transition={{ duration: 0.8, delay: 0.5 }} viewport={{ once: true }} style={{ width: '1px', height: '100px', background: '#999', margin: '20px 0 0 20px', transformOrigin: 'bottom' }} />
                 </div>
                 
-                {/* Top Right: Heart Image */}
-                <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    <img src="./heart_compute_light.png" alt="Heart Compute" style={{ width: '100%', maxWidth: '350px', mixBlendMode: 'multiply' }} />
-                    <div style={{ width: '1px', height: '100px', background: '#ccc', marginTop: '20px', alignSelf: 'flex-start', marginLeft: '60px' }}></div>
-                  </motion.div>
+                {/* Top Right: Heart Image & Line */}
+                <div style={{ display: 'flex', justifyContent: 'center', zIndex: 2 }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                      <img src="./heart_compute_light.png" alt="Heart Compute" style={{ width: '100%', maxWidth: '350px', mixBlendMode: 'multiply' }} />
+                    </motion.div>
+                    <motion.div initial={{ scaleY: 0 }} whileInView={{ scaleY: 1 }} transition={{ duration: 0.8, delay: 0.5 }} viewport={{ once: true }} style={{ width: '1px', height: '100px', background: '#999', marginTop: '10px', alignSelf: 'flex-start', marginLeft: '60px', transformOrigin: 'top' }} />
+                  </div>
                 </div>
 
                 {/* Bottom Left: Brain Image */}
-                <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '-40px' }}>
+                <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '-150px', zIndex: 1 }}>
                   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                    <img src="./hardware_brain.png" alt="Hardware Brain" style={{ width: '100%', maxWidth: '500px' }} />
+                    <img src="./hardware_brain.png" alt="Hardware Brain" style={{ width: '100%', maxWidth: '550px' }} />
                   </motion.div>
                 </div>
                 
                 {/* Bottom Right: Heart Text */}
-                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', paddingLeft: '40px', marginTop: '-40px' }}>
-                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', paddingLeft: '40px', marginTop: '-60px', zIndex: 2 }}>
+                  <motion.div initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 1.3 }} viewport={{ once: true }}>
                     <Title level={2} style={{ color: '#333', fontSize: '2.5rem', margin: 0 }}>具心算力</Title>
                     <Paragraph style={{ color: '#666', fontSize: '1rem', lineHeight: 1.8, marginTop: '20px' }}>
                       算力不应只是用来跑数据的计算器，而是有理解、有方向、有效率的生命体。在心脏加持下输送到有需要的组织，并形成循环供能。
