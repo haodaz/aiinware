@@ -296,6 +296,48 @@ const App: React.FC = () => {
               </Row>
             </div>
           </section>
+          {/* NEW SECTION 1.5: 算力飞轮 */}
+          <section className="section-padding bg-light-pattern" style={{ backgroundColor: '#ffffff', borderTop: '1px solid #f0f0f0' }}>
+            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
+              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                  <Title level={2} style={{ color: '#0b1a30' }}>算力的资产化飞轮：从“一次性消耗”到“数字资产沉淀”</Title>
+                  <Paragraph style={{ color: '#555', fontSize: '16px' }}>每一次算力调用，都在为基础模型和行业知识库持续“加厚”</Paragraph>
+                </div>
+              </motion.div>
+
+              <Row gutter={[48, 48]} align="stretch">
+                <Col xs={24} md={12}>
+                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} style={{ height: '100%' }}>
+                    <Card bordered={false} style={{ background: '#f5f7fa', border: 'none', boxShadow: 'none', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                      <Title level={4} style={{ color: '#888' }}>传统通用 AI 模式下的算力</Title>
+                      <Title level={2} style={{ color: '#333', fontSize: '28px', margin: '16px 0' }}>算力是“消耗品”</Title>
+                      <Paragraph style={{ color: '#666', lineHeight: 1.8, fontSize: '16px', flexGrow: 1 }}>
+                        在纯通用大模型场景下，算力被用于处理单次查询。回答结束后，随着对话窗口的关闭，辛苦消耗 Token 检索来的高价值数据就随之<Text strong type="danger">消亡</Text>。
+                        <br/><br/>
+                        下次面临同样的查询，硬件设备只能重新消耗算力从零开始。在这种模式下，Token 与算力仅仅是一次性的消耗品，无法产生复利。
+                      </Paragraph>
+                    </Card>
+                  </motion.div>
+                </Col>
+                
+                <Col xs={24} md={12}>
+                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }} style={{ height: '100%' }}>
+                    <Card bordered={false} style={{ background: 'linear-gradient(135deg, #0b1a30 0%, #1a365d 100%)', border: 'none', boxShadow: '0 20px 40px rgba(11,26,48,0.15)', height: '100%', display: 'flex', flexDirection: 'column' }}>
+                      <Title level={4} style={{ color: '#a0c4ff' }}>平方创想加持下的新华三算力</Title>
+                      <Title level={2} style={{ color: '#fff', fontSize: '28px', margin: '16px 0' }}>算力是“资产投资”</Title>
+                      <Paragraph style={{ color: '#e0e0e0', lineHeight: 1.8, fontSize: '16px', flexGrow: 1 }}>
+                        依托平方创想独特的<Text strong style={{ color: '#d4af37' }}>数据飞轮架构</Text>，算力每一次被业务终端的真实需求所驱动，所产生的高价值数据都将被系统“零额外成本”地捕获、去重、合并与沉淀。
+                        <br/><br/>
+                        同一个目标被查询越多次，这台设备内的知识库就越丰满。每一分钱的算力支出，都在转化为高纯度的数字资产，让系统<Text strong style={{ color: '#fff' }}>越用越快、越用越准、越用越聪明</Text>。
+                      </Paragraph>
+                    </Card>
+                  </motion.div>
+                </Col>
+              </Row>
+            </div>
+          </section>
+
 
           {/* NEW SECTION 2: 全矩阵硬件赋能 */}
           <section className="section-padding bg-light-pattern" style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', backgroundBlendMode: 'overlay', borderTop: '1px solid #f0f0f0' }}>
