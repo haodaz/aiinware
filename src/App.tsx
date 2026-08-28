@@ -3,7 +3,6 @@ import { Layout, Typography, Card, Row, Col, Tag, Space, Timeline, ConfigProvide
 import { 
   SafetyOutlined, 
   ClusterOutlined, 
-  BulbOutlined, 
   HeartOutlined, 
   CloudServerOutlined,
   AppstoreOutlined,
@@ -120,7 +119,7 @@ const App: React.FC = () => {
                     <span className="title-gradient">行业生慧</span>
                   </Title>
                   <Title level={2} style={{ color: '#888', fontWeight: 300, marginTop: 10 }}>
-                    基于“教育-科技-人才”行业基础设施与能力，打造 <Text style={{ color: '#d4af37', fontWeight: 600, fontSize: '2.5rem', margin: '0 8px' }}>具脑硬件与具心算力</Text>
+                    基于“教育-科技-人才”行业基础设施与能力，<br/>打造 <Text style={{ color: '#d4af37', fontWeight: 600, fontSize: '2.5rem', margin: '0 8px' }}>具脑硬件 + 具心算力</Text>
                   </Title>
                   <Paragraph style={{ fontSize: '1.2rem', color: '#bbb', maxWidth: '900px', margin: '32px auto 0 auto', lineHeight: 1.8 }}>
                     共同践行“科技求真、以人为本”理念。依托平方创想在教育、科技、人才领域的垂直数字基础设施与深厚行业 Know-how，深度赋能新华三算力底座，让硬件焕发业务生机。以真实的垂直切入价值，带动底层基础设施与服务的大规模部署，携手进入千行百业与千家万户。
@@ -130,41 +129,68 @@ const App: React.FC = () => {
             </div>
           </section>
 
-          {/* Vision Section: Brain and Heart (Light Theme) */}
-          <section className="section-padding bg-light-pattern" style={{ backgroundColor: 'rgba(255, 255, 255, 0.9)', backgroundBlendMode: 'overlay' }}>
-            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
-              <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}>
-                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                  <Title level={2}><span className="title-gradient-dark">具脑与具心</span>：打破同质化的全新战略</Title>
-                  <Paragraph style={{ color: '#666', fontSize: '16px' }}>不再是单纯堆砌算力，而是赋予硬件灵魂，从“泛价值”走向“核心切入价值”</Paragraph>
-                </div>
-              </motion.div>
-
-              <Row gutter={[48, 48]} justify="center">
-                <Col xs={24} md={12}>
+          {/* Section 2a: 具脑硬件 */}
+          <section style={{ 
+            minHeight: '100vh', 
+            background: '#050b14', 
+            display: 'flex', 
+            alignItems: 'center', 
+            padding: '80px 24px',
+            position: 'relative'
+          }}>
+            <div style={{ maxWidth: '1400px', margin: '0 auto', width: '100%' }}>
+              <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+                <Title level={2} style={{ color: '#fff', fontSize: '3rem' }}>具脑与具心：打破同质化的全新战略</Title>
+                <Paragraph style={{ color: '#a0c4ff', fontSize: '1.2rem', margin: 0 }}>智能化时代真基建——以人为本，软硬兼济，赋能行业核心价值</Paragraph>
+              </div>
+              <Row align="middle" gutter={[64, 48]}>
+                <Col xs={24} lg={12}>
                   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                    <Card className="glass-card" bordered={false} style={{ height: '100%', background: '#f8faff', boxShadow: '0 10px 30px rgba(24,144,255,0.08)' }}>
-                      <div style={{ fontSize: '48px', color: '#1890ff', marginBottom: '20px' }}><BulbOutlined /></div>
-                      <Title level={3} style={{ color: '#0b1a30' }}>具脑硬件</Title>
-                      <Paragraph style={{ color: '#555', fontSize: '16px', lineHeight: 1.8 }}>
-                        让硬件搭载的AI更好、更垂直，更适合目前高风险、高利害的教育政务行业。
-                        <br/><br/>
-                        深谙行业规则、聚焦行业“人”的要素，能够主动作出专业诊断、助力决策的“行业专家大脑”。
-                      </Paragraph>
-                    </Card>
+                    <img src="./hardware_brain.png" alt="Hardware Brain" style={{ width: '100%', borderRadius: '16px', boxShadow: '0 20px 60px rgba(24,144,255,0.1)' }} />
                   </motion.div>
                 </Col>
-                <Col xs={24} md={12}>
+                <Col xs={24} lg={12}>
                   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                    <Card className="glass-card" bordered={false} style={{ height: '100%', background: '#fffcf5', boxShadow: '0 10px 30px rgba(212,175,55,0.08)' }}>
-                      <div style={{ fontSize: '48px', color: '#d4af37', marginBottom: '20px' }}><HeartOutlined /></div>
-                      <Title level={3} style={{ color: '#0b1a30' }}>具心算力</Title>
-                      <Paragraph style={{ color: '#555', fontSize: '16px', lineHeight: 1.8 }}>
-                        算力不应只是用来跑数据的计算器，而是有理解、有方向、有效率的生命体。
-                        <br/><br/>
-                        代表着人工智能在垂直场景下的记忆、交流、共情与正向反馈机制。
-                      </Paragraph>
-                    </Card>
+                    <Title style={{ color: '#fff', fontSize: '3.5rem', marginBottom: '16px' }}>
+                      <span className="title-gradient">具脑硬件</span>
+                    </Title>
+                    <Paragraph style={{ color: '#ccc', fontSize: '1.2rem', lineHeight: 2 }}>
+                      让硬件搭载的AI更好、更垂直，更适合目前高风险、高利害的教育政务行业。
+                      <br/><br/>
+                      深谙行业规则、聚焦行业“人”的要素，能够主动作出专业诊断、助力决策的“行业专家大脑”。
+                    </Paragraph>
+                  </motion.div>
+                </Col>
+              </Row>
+            </div>
+          </section>
+
+          {/* Section 2b: 具心算力 */}
+          <section style={{ 
+            minHeight: '100vh', 
+            background: '#02050a', 
+            display: 'flex', 
+            alignItems: 'center', 
+            padding: '80px 24px',
+            position: 'relative'
+          }}>
+            <div style={{ maxWidth: '1400px', margin: '0 auto', width: '100%' }}>
+              <Row align="middle" gutter={[64, 48]} style={{ flexFlow: 'row-reverse' }}>
+                <Col xs={24} lg={12}>
+                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                    <img src="./heart_compute.png" alt="Heart Compute" style={{ width: '100%', borderRadius: '16px', boxShadow: '0 20px 60px rgba(212,175,55,0.1)' }} />
+                  </motion.div>
+                </Col>
+                <Col xs={24} lg={12}>
+                  <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+                    <Title style={{ color: '#fff', fontSize: '3.5rem', marginBottom: '16px' }}>
+                      <span style={{ color: '#d4af37' }}>具心算力</span>
+                    </Title>
+                    <Paragraph style={{ color: '#ccc', fontSize: '1.2rem', lineHeight: 2 }}>
+                      算力不应只是用来跑数据的计算器，而是有理解、有方向、有效率的生命体。
+                      <br/><br/>
+                      代表着人工智能在垂直场景下的记忆、交流、共情与正向反馈机制。
+                    </Paragraph>
                   </motion.div>
                 </Col>
               </Row>
@@ -172,15 +198,26 @@ const App: React.FC = () => {
           </section>
 
           {/* Philosophy Section */}
-          <section className="section-padding bg-light-pattern" style={{ backgroundColor: 'rgba(245, 247, 250, 0.85)', backgroundBlendMode: 'overlay', borderBottom: '1px solid #e8e8e8' }}>
-            <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
+          <section style={{ 
+            minHeight: '100vh', 
+            backgroundImage: "url('./human_centric.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed',
+            display: 'flex', 
+            alignItems: 'center', 
+            padding: '80px 24px',
+            position: 'relative'
+          }}>
+            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(5, 11, 20, 0.85)' }} />
+            <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '0 24px', textAlign: 'center', position: 'relative', zIndex: 1 }}>
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-                <HeartOutlined style={{ fontSize: '48px', color: '#ff4d4f', marginBottom: '24px' }} />
-                <Title level={2} style={{ color: '#0b1a30', margin: 0 }}>具脑 + 具心 = 真正的以人为本</Title>
-                <Paragraph style={{ color: '#555', fontSize: '18px', lineHeight: 1.8, marginTop: '30px', textAlign: 'justify', textIndent: '2em' }}>
-                  在追逐冰冷算力和机械躯体的时代，我们坚信：<Text strong style={{ color: '#1890ff', fontSize: '18px' }}>关注“人”、服务“人”、打动“人”</Text>，才是科技硬件的终极归宿。
+                <HeartOutlined style={{ fontSize: '64px', color: '#ff4d4f', marginBottom: '32px' }} />
+                <Title style={{ color: '#fff', fontSize: '4rem', margin: 0, fontWeight: 800 }}>具脑 + 具心 = 真正的以人为本</Title>
+                <Paragraph style={{ color: '#e0e0e0', fontSize: '1.5rem', lineHeight: 1.8, marginTop: '40px', textAlign: 'justify', textIndent: '2em' }}>
+                  在追逐冰冷算力和机械躯体的时代，我们坚信：<Text strong style={{ color: '#ff4d4f', fontSize: '1.5rem' }}>关注“人”、服务“人”、打动“人”</Text>，才是科技硬件的终极归宿。
                 </Paragraph>
-                <Paragraph style={{ color: '#555', fontSize: '18px', lineHeight: 1.8, textAlign: 'justify', textIndent: '2em' }}>
+                <Paragraph style={{ color: '#e0e0e0', fontSize: '1.5rem', lineHeight: 1.8, textAlign: 'justify', textIndent: '2em' }}>
                   只有当硬件具备了垂直深度的专业“大脑”（精准诊断、智慧决策），同时又拥有了能够长期记忆、持续共情的“心脏”（伴随成长、懂你所需），那些堆砌在机房里的算力与数据，才能真正转化为改变千行百业、温润千家万户的数字生命力。这不仅是硬件形态的升级，更是重塑硬件与人互动关系的哲学跨越。
                 </Paragraph>
               </motion.div>
