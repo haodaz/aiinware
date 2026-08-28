@@ -225,13 +225,13 @@ const App: React.FC = () => {
             </div>
           </section>
 
-          {/* NEW SECTION 1: 破局 —— 通用大模型 VS 行业专精大脑 */}
+          {/* NEW SECTION 1: 核心壁垒 —— 行业垂直基础设施与深度 Know-how */}
           <section className="section-padding" style={{ background: '#fafbfc' }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
               <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                 <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-                  <Title level={2} style={{ color: '#0b1a30' }}>AI赋能，不止于DeepSeek</Title>
-                  <Paragraph style={{ color: '#666', fontSize: '16px' }}>通用模型的尽头，是深入行业 Know-how 的专精大脑</Paragraph>
+                  <Title level={2} style={{ color: '#0b1a30' }}>从“通用基座”到“垂直大脑”的价值飞跃</Title>
+                  <Paragraph style={{ color: '#666', fontSize: '16px' }}>基于平方创想教科人垂直基础设施与深度 Know-how，为硬件注入行业灵魂</Paragraph>
                 </div>
               </motion.div>
 
@@ -239,14 +239,14 @@ const App: React.FC = () => {
                 <Col xs={24} md={11}>
                   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
                     <Card bordered={false} style={{ background: '#fff', border: '1px solid #e8e8e8', boxShadow: '0 4px 12px rgba(0,0,0,0.02)' }}>
-                      <Title level={4} style={{ color: '#888' }}>传统赋能模式 (客户痛点)</Title>
+                      <Title level={4} style={{ color: '#888' }}>当前硬件落地的挑战</Title>
                       <Paragraph style={{ color: '#333', fontSize: '18px', fontWeight: 'bold' }}>
-                        通用大模型 + 灵犀使能平台 + 客户自建知识库
+                        通用 AI 平台 + 客户自建行业知识库
                       </Paragraph>
                       <Paragraph style={{ color: '#666', lineHeight: 1.8 }}>
-                        新华三为客户提供了极其优秀的算力底座和通用平台框架（如 LinSeer Cube）。但政教客户往往缺乏高质量的内部数据，也没有专业的算法团队去“挂载知识库”和“编排场景”。
+                        新华三等头部厂商为客户提供了极致的算力底座和通用 AI 使能平台。然而，在教育、政务等高度严谨的领域，客户往往面临“无米之炊”的困境：缺乏高质量的结构化数据，更缺乏将政策导向转化为算法逻辑的团队。
                         <br/><br/>
-                        <Text type="danger" strong>痛点：空有顶级算力，难以在政教核心业务层产生实际化学反应，客户买单意愿受限。</Text>
+                        <Text type="danger" strong>痛点：算力虽强，但因为缺少行业 Know-how 的支撑，难以真正深入客户的核心业务流。</Text>
                       </Paragraph>
                     </Card>
                   </motion.div>
@@ -259,14 +259,14 @@ const App: React.FC = () => {
                 <Col xs={24} md={11}>
                   <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} transition={{ delay: 0.2 }}>
                     <Card bordered={false} style={{ background: '#fffcf5', border: '1px solid #faad14', boxShadow: '0 10px 30px rgba(250, 173, 20, 0.1)' }}>
-                      <Title level={4} style={{ color: '#d4af37' }}>平方创想联合赋能 (破局)</Title>
+                      <Title level={4} style={{ color: '#d4af37' }}>平方创想的“交钥匙”方案</Title>
                       <Paragraph style={{ color: '#333', fontSize: '18px', fontWeight: 'bold' }}>
-                        出厂预装“最强大脑”，附带 10 年优质行业数据
+                        垂直基础设施 + 领域 Know-how + 专精模型
                       </Paragraph>
                       <Paragraph style={{ color: '#666', lineHeight: 1.8 }}>
-                        我们直接将平方创想深耕十年的<Text strong style={{ color: '#d4af37' }}>教育、科技、人才专属图谱</Text>和已在部委验证的成熟 Agent（“一答”、“知己”）注入灵犀大模型一体机中。
+                        我们将平方创想深耕十余年的<Text strong style={{ color: '#d4af37' }}>教育、科技、人才数据图谱</Text>，以及完全成熟的垂直模型应用（如“一答”、“知己”），作为标准“数字大脑”预装进算力一体机中。
                         <br/><br/>
-                        <Text strong style={{ color: '#d4af37' }}>优势：从“卖通用工具平台”升级为“卖即插即用、免调优的顶配行业专家”，以强大的业务 Know-how 反向拉动硬件采购。</Text>
+                        <Text strong style={{ color: '#d4af37' }}>优势：提供海量的高价值优质行业数据与即插即用的专家模型，让算力设备出厂即具备国家级的行业智力标准。</Text>
                       </Paragraph>
                     </Card>
                   </motion.div>
