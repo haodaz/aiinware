@@ -348,6 +348,12 @@ const App: React.FC = () => {
                     </motion.div>
                   </Col>
                 </Row>
+
+                {/* Placeholder for Brain Module 2 */}
+                <div style={{ marginTop: '100px', borderTop: '1px dashed #ccc', paddingTop: '60px', opacity: 0.5 }}>
+                  <Title level={3} style={{ textAlign: 'center', color: '#999' }}>[ 具脑硬件 · 模块 2 待定区 ]</Title>
+                  <Paragraph style={{ textAlign: 'center', color: '#999' }}>这里将作为具脑硬件体系化论述的第二个模块</Paragraph>
+                </div>
               </div>
             </motion.section>
 
@@ -355,14 +361,24 @@ const App: React.FC = () => {
             <motion.section 
               id="value-heart"
               onViewportEnter={() => setActiveSection('heart')}
-              viewport={{ amount: 0.5 }}
+              viewport={{ amount: 0.3 }}
               style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', padding: '80px 24px', background: '#fff', position: 'relative' }}
             >
               <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
                 <div style={{ textAlign: 'center', marginBottom: '80px' }}>
                   <Title level={4} style={{ color: '#d4af37', fontWeight: 'bold' }}>具心算力</Title>
-                  <Title level={2} style={{ color: '#333', fontSize: '2.5rem', marginTop: 10 }}>实现算力的资产化飞轮：从“一次性消耗”到“数字资产沉淀”</Title>
-                  <Paragraph style={{ color: '#666', fontSize: '1.2rem', marginTop: 20 }}>每一次算力调用，都在为知识库持续“加厚”，让系统越用越聪明</Paragraph>
+                  <Title level={2} style={{ color: '#333', fontSize: '2.5rem', marginTop: 10 }}>体系化论述</Title>
+                </div>
+
+                {/* Placeholder for Heart Module 1 */}
+                <div style={{ marginBottom: '100px', borderBottom: '1px dashed #ccc', paddingBottom: '60px', opacity: 0.5 }}>
+                  <Title level={3} style={{ textAlign: 'center', color: '#999' }}>[ 具心算力 · 模块 1 待定区 ]</Title>
+                  <Paragraph style={{ textAlign: 'center', color: '#999' }}>这里将作为具心算力体系化论述的第一个模块</Paragraph>
+                </div>
+
+                <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+                  <Title level={2} style={{ color: '#333', fontSize: '2rem' }}>模块 2：算力的资产化飞轮</Title>
+                  <Paragraph style={{ color: '#666', fontSize: '1.2rem', marginTop: 10 }}>每一次算力调用，都在为知识库持续“加厚”，让系统越用越聪明</Paragraph>
                 </div>
 
                 <Row gutter={[64, 64]} align="stretch">
